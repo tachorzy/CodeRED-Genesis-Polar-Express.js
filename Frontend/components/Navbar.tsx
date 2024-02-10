@@ -23,7 +23,6 @@ const NavBar = () => {
     })
     return (
         <div className={" absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 2xl:space-x-[26rem] flex flex-row z-50"}>
-            <div>aaaaaaa</div>
             <Image src="/branding/SlayoverLogoGradient.svg" width={350} height={350} alt="brand logo" className="mt-6"></Image>
         </div>
     );
