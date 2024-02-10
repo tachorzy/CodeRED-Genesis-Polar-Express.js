@@ -1,17 +1,29 @@
+'use client'
+
 import Image from 'next/image'
-import Link from 'next/link'
-import { chillaxRegular, chillaxMedium, chillaxBold } from '@/utils/localNextFont'
+import { useEffect } from "react";
+
 
 const navItems = new Map([
-    ['Find Visas', { link: '/'}],
-    ['About', { link: '/about'}],
-    ['FAQ', { link: '/faq'}],
+    ['Find Visas', { link: '/' }],
+    ['About', { link: '/about' }],
+    ['FAQ', { link: '/faq' }],
 ])
 
 const NavBar = () => {
-      
-    return(
+    console.log("Navbar loaded client side")
+    useEffect(() => {
+        async function getSampleApi() {
+            const response = await fetch("http://localhost:8000/")
+            const data = await response.json()
+            console.log(data)
+        }
+
+        getSampleApi()
+    })
+    return (
         <div className={" absolute top-0 align-baseline h-20 w-screen space-x-12 md:space-x-96 2xl:space-x-[26rem] flex flex-row z-50"}>
+            <div>aaaaaaa</div>
             <Image src="/branding/SlayoverLogoGradient.svg" width={350} height={350} alt="brand logo" className="mt-6"></Image>
         </div>
     );

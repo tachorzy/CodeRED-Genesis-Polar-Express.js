@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { ReactElement, ReactNode } from "react";
+import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,12 +14,11 @@ export type LayoutProps = {
   children: ReactNode
 }
 
-const RootLayout = ({ children }: LayoutProps): ReactElement => {
-  console.log(children)
+const RootLayout = async ({ children }: LayoutProps) => {
   return (
     <html lang="en">
       <body className={inter.className}>
-        Testing
+        {children}
       </body>
     </html>
   );
