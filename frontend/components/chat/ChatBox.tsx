@@ -11,7 +11,7 @@ import SearchBar from './SearchBar'
 const ChatBox = () => {
     return( 
         //chillaxRegular.className + 
-        <div className={" absolute h-screen w-[46.65%] bg-[#FCFFFF]"}>
+        <div className={" absolute h-screen w-[46.65%] bg-[#FCFFFF] pt-5"}>
             <SearchBar/>
             <div className="flex flex-row -mt-3 pl-5">
                     <ChatPrompt></ChatPrompt>
