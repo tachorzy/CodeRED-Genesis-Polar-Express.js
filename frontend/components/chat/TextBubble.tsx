@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 // import { chillaxRegular } from '@/utils/localNextFont'
 
-const TextBubble = (props: {sender: string}) => {
+const TextBubble = (props: {sender: string, message: string}) => {
     // const [isVisible, setIsVisible] = useState(true);
 
 
@@ -18,26 +18,14 @@ const TextBubble = (props: {sender: string}) => {
     //         </div>
     //     )
     // }
-    let alignment = "mr-auto"
+    let textQualities = "mr-auto bg-violet-200 text-violet-700"
     
     if (props.sender === "user") {
-        alignment = "ml-auto"
+        textQualities = "ml-auto bg-violet-400 text-violet-50"
     }
     return( 
-        <div className={` ${alignment} min-h-24 w-1/2 rounded-2xl bg-violet-200 p-3`}>
-            <h1 className="text-xs font-semibold text-violet-700">{"blah blah blah blah blah blah blah blah"}</h1>
-
-            {props.sender == "AI" 
-                ? 
-                <svg width="70" height="70" className={"absolute mt-4 rotate-90 rounded"}>
-                    <polygon points="50, 50, 100, 100, 0, 100" fill="#ddd6fe" className="ml-16"/>
-                </svg>
-                :  
-                <svg width="70" height="70" className={"absolute mt-0.5 ml-[14.25rem] rotate-45 rounded"}>
-                    <polygon points="50, 50, 100, 100, 0, 100" fill="#ddd6fe" className="ml-16"/>
-                </svg>
-                }
-
+        <div className={`flex flex-col ${textQualities} min-h-16 w-1/2 rounded-2xl p-3`}>
+            <h1 className="text-xs font-semibold leading-relaxed">{props.message}</h1>
         </div>
 
     );

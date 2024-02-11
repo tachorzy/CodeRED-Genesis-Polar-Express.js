@@ -40,8 +40,8 @@ const ChatBox = () => {
                 {/*Honeypot field */}
                 <input name="_gotcha" type="hidden" className="hidden"/>
                 <div className="flex flex-col h-[34rem] py-5 gap-y-6">
-                    <TextBubble sender="AI"/>
-                    <TextBubble sender="user"/>
+                    <TextBubble sender="AI" message={"test tes test  test"}/>
+                    <TextBubble sender="user" message={"BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH"}/>
                 </div>
                 <div className="grid grid-cols-2 gap-x-5 py-5">
                     <div className="bg-violet-900 rounded-l-2xl h-14 w-[17%] flex flex-row">
