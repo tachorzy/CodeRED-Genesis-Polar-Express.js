@@ -34,3 +34,11 @@ def getGenres(query: str):
 @app.post("/recLocation")
 def recLocation(genres: str):
     return af.getLocationBasedOnGenre(genres)
+
+@app.post("/category")
+def getCat(prompt: str):
+    return af.getCategory(prompt)
+
+@app.post("/slayover")
+def getSlayover(place: str, hours: str):
+    return af.getSlayover(place,hours)

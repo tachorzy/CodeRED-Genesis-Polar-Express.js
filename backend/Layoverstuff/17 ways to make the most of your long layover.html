@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"10e77406ad","applicationID":"3232183","transactionName":"cQxdTBNbCl9dQBkGFFsHVktOVRRHUVFaBBIdEFtXFg==","queueTime":2,"applicationTime":77,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"3232193",accountID:"708841",trustKey:"708841",licenseKey:"10e77406ad",applicationID:"3232183"};;/*! For license information please see nr-loader-rum-1.251.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,DL:()=>w,OP:()=>S,lF:()=>T,Yu:()=>x,Dg:()=>m,CX:()=>c,GE:()=>_,sU:()=>R});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,sampling_rate:50,error_sampling_rate:50,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!A[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return A[e]}function _(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const x=(0,n.mF)().o;var E=r(385),D=r(6818);const k={buildEnv:D.Re,customTransaction:void 0,disabled:!1,distMethod:D.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(E._A?.performance?.timeOrigin||E._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof E._A.XMLHttpRequest?.prototype?.addEventListener,version:D.q4,denyList:void 0},j={};function S(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!j[e])throw new Error("Runtime for ".concat(e," was never set"));return j[e]}function R(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");j[e]=(0,i.D)(t,k);const r=(0,n.ek)(e);r&&(r.runtime=j[e])}function T(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.251.1",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,cv:()=>l,iS:()=>a,il:()=>n,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(o?.performance?.timeOrigin||o?.performance?.timing?.navigationStart||Date.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occured while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{L:()=>d,R:()=>c});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,r)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(u(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const r=[...s[e]];function a(t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)l(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}r.every((e=>{let[t,r]=e;return r.staged}))&&(r.sort(((e,t)=>e[1].priority-t[1].priority)),r.forEach((t=>{let[r]=t;s[e].delete(r),a(r)})))}function l(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},f=!1;try{f=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=p(n),c=v(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var f=b()[s[e]];f&&f.push([g,e,r,a]);return a},get:m,listeners:v,context:p,buffer:function(e,t){const r=b();if(t=t||"feature",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:l,aborted:!1,isBuffering:function(e){return!!b()[s[e]]},debugId:r,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return g;function p(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function h(e,t){n[e]=v(e).concat(t)}function v(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(g,t)}function b(){return g.backlog}}(void 0,"globalEE"),d=(0,n.fP)();function l(){u.aborted=!0,u.backlog={}}d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>o,IK:()=>c,oD:()=>i,uT:()=>s,wO:()=>a});const n="NRBA",i=144e5,o=18e5,a={PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},s={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},c={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.round(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>d,T:()=>l});var n=r(8325),i=r(5546),o=r(3325),a=r(385);const s="newrelic";const c={stn:[o.D.sessionTrace],err:[o.D.jserrors,o.D.metrics],ins:[o.D.pageAction],spa:[o.D.spa],sr:[o.D.sessionReplay,o.D.sessionTrace]},u=new Set;function d(e,t){const r=n.ee.get(t);e&&"object"==typeof e&&(u.has(t)||(Object.entries(e).forEach((e=>{let[t,n]=e;c[t]?c[t].forEach((e=>{n?(0,i.p)("feat-"+t,[],void 0,e,r):(0,i.p)("block-"+t,[],void 0,e,r),(0,i.p)("rumresp-"+t,[Boolean(n)],void 0,e,r)})):n&&(0,i.p)("feat-"+t,[],void 0,void 0,r),l[t]=Boolean(n)})),Object.keys(c).forEach((e=>{void 0===l[e]&&(c[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,r))),l[e]=!1)})),u.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{a._A.dispatchEvent(new CustomEvent(s,{detail:e}))}catch(e){}}({loaded:!0})))}const l={}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(7894),i=r(385);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,n.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},7530:(e,t,r)=>{"use strict";r.d(t,{j:()=>b});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(7894),c=r(8e3),u=r(3960),d=r(385),l=r(50),f=r(3081),g=r(8632);function p(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay"].forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}var h=r(2825);const v=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let m=!1;function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,y=arguments.length>3?arguments[3]:void 0,{init:A,info:w,loader_config:_,runtime:x={loaderType:b},exposed:E=!0}=t;const D=(0,g.gG)();w||(A=D.init,w=D.info,_=D.loader_config),(0,i.Dg)(e.agentIdentifier,A||{}),(0,i.GE)(e.agentIdentifier,_||{}),w.jsAttributes??={},d.v6&&(w.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,w);const k=(0,i.P_)(e.agentIdentifier),j=[w.beacon,w.errorBeacon];m||(k.proxy.assets&&(v(k.proxy.assets),j.push(k.proxy.assets)),k.proxy.beacon&&j.push(k.proxy.beacon),p(),(0,g.EZ)("activatedFeatures",h.T)),x.denyList=[...k.ajax.deny_list||[],...k.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,x),void 0===e.api&&(e.api=function(e,t){t||(0,c.R)(e,"api");const g={};var p=a.ee.get(e),h=p.get("tracer"),v="api-",m=v+"ixn-";function b(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),w(v,n,!0,o||null===r?"session":void 0)(t,r)}function y(){}["setErrorHandler","finished","addToTrace","addRelease"].forEach((e=>{g[e]=w(v,e,!0,"api")})),g.addPageAction=w(v,"addPageAction",!0,n.D.pageAction),g.setCurrentRouteName=w(v,"routeName",!0,n.D.spa),g.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,w(v,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",r);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},g.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(f.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,p);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{p.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},g.recordReplay=function(){(0,o.p)(f.xS,["API/recordReplay/called"],void 0,n.D.metrics,p),(0,o.p)("recordReplay",[],void 0,n.D.sessionReplay,p)},g.pauseReplay=function(){(0,o.p)(f.xS,["API/pauseReplay/called"],void 0,n.D.metrics,p),(0,o.p)("pauseReplay",[],void 0,n.D.sessionReplay,p)},g.interaction=function(){return(new y).get()};var A=y.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(f.xS,["API/createTracer/called"],void 0,n.D.metrics,p),(0,o.p)(m+"tracer",[(0,s.z)(),e,r],i,n.D.spa,p),function(){if(h.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw h.emit("fn-err",[arguments,this,e],r),e}finally{h.emit("fn-end",[(0,s.z)()],r)}}}};function w(e,t,r,i){return function(){return(0,o.p)(f.xS,["API/"+t+"/called"],void 0,n.D.metrics,p),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],r?null:this,i,p),r?void 0:this}}function _(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,c.L)(e,"api")})).catch((()=>(0,l.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{A[e]=w(m,e,void 0,n.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(f.xS,["API/noticeError/called"],void 0,n.D.metrics,p),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,n.D.jserrors,p)},d.il?(0,u.b2)((()=>_()),!0):_(),g}(e.agentIdentifier,y)),void 0===e.exposed&&(e.exposed=E),m=!0}},1926:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.sessionReplay]:9}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.251.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.251.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-se+MgwtmnbdP/MASClg+GOgpTkSpcEndd09loplWI8jtivCRtbuBQGqwgSDauFr6FUmrBsb2ccq/Hk5NZDAKMQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.251.1.PROD"]=self["webpackChunk:NRBA-1.251.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(1926);var e=i(50);class t{#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e("recordReplay")}pauseReplay(){return this.#e("pauseReplay")}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var r=i(3325),n=i(234);const o=Object.values(r.D);function a(e){const t={};return o.forEach((r=>{t[r]=function(e,t){return!1!==(0,n.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var s=i(7530);var c=i(8e3),u=i(5938),d=i(3960),l=i(385);class f extends u.W{constructor(e,t,r){let i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=i,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,n.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,c.R)(e,r)}importAggregator(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,c.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));const r=l.il&&!0===(0,n.Mt)(this.agentIdentifier,"privacy.cookies_enabled");let o;this.onAggregateImported=new Promise((e=>{o=e}));const a=async()=>{let n;try{if(r){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,957));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t)}try{if(!this.shouldImportAgg(this.featureName,n))return(0,c.L)(this.agentIdentifier,this.featureName),void o(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:r}=await e(this.featureName,"aggregate");this.featAggregate=new r(this.agentIdentifier,this.aggregator,t),o(!0)}catch(t){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),t),this.abortHandler?.(),(0,c.L)(this.agentIdentifier,this.featureName),o(!1)}};l.il?(0,d.b2)((()=>a()),!0):a()}shouldImportAgg(e,t){return e!==r.D.sessionReplay||!!n.Yu.MO&&(!1!==(0,n.Mt)(this.agentIdentifier,"session_trace.enabled")&&(!!t?.isNew||!!t?.state.sessionReplayMode))}}var g=i(7633);class p extends f{static featureName=g.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,g.t,r),this.importAggregator()}}var h=i(1117),v=i(1284);class m extends h.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,v.D)(e,(function(e,r){t[e]=b(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,v.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=b(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=y(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=b(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=A(this.aggregatedData[r]),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function b(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=y(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function y(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function A(e){return"object"!=typeof e?[]:(0,v.D)(e,w)}function w(e,t){return t}var _=i(8632),x=i(4402),E=i(4351);var D=i(5546),k=i(7956),j=i(3239),S=i(7894),R=i(9251);class T extends f{static featureName=R.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,R.t,r),l.il&&((0,k.N)((()=>(0,D.p)("docHidden",[(0,S.z)()],void 0,R.t,this.ee)),!0),(0,j.bP)("pagehide",(()=>(0,D.p)("winPagehide",[(0,S.z)()],void 0,R.t,this.ee))),this.importAggregator())}}var I=i(3081);class P extends f{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends t{constructor(t){let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,x.ky)(16);super(),l._A?(this.agentIdentifier=r,this.sharedAggregator=new m({agentIdentifier:this.agentIdentifier}),this.features={},(0,_.h5)(r,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(p),(0,s.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:(0,n.C5)(this.agentIdentifier),init:(0,n.P_)(this.agentIdentifier),loader_config:(0,n.DL)(this.agentIdentifier),runtime:(0,n.OP)(this.agentIdentifier)}}run(){try{const t=a(this.agentIdentifier),n=[...this.desiredFeatures];n.sort(((e,t)=>r.p[e.featureName]-r.p[t.featureName])),n.forEach((n=>{if(t[n.featureName]||n.featureName===r.D.pageViewEvent){const i=function(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.sessionReplay:return[r.D.sessionTrace];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}(n.featureName);i.every((e=>t[e]))||(0,e.Z)("".concat(n.featureName," is enabled but one or more dependent features has been disabled (").concat((0,E.P)(i),"). This may cause unintended consequences or missing data...")),this.features[n.featureName]=new n(this.agentIdentifier,this.sharedAggregator)}}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,_.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}}({features:[p,T,P],loaderType:"lite"})})()})();</script>
+<meta content='https://www.worldpackers.com/articles/ways-to-make-the-most-of-your-long-layover' property='og:url'>
+<meta content='https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_jpg,h_600,q_auto,w_900/v1/guides/article_cover/yboi05ezchzelszsvgpz' property='og:image'>
+<meta content='900' property='og:image:width'>
+<meta content='600' property='og:image:height'>
+<title>17 ways to make the most of your long layover</title>
+<meta content='So you&#39;ve, intentionally, or unintentionally booked yourself a long layover on your next trip. Here are a few suggestions for how to enjoy your long layover.' name='description'>
+<meta content='17 ways to make the most of your long layover' property='og:title'>
+<meta content='So you&#39;ve, intentionally, or unintentionally booked yourself a long layover on your next trip. Here are a few suggestions for how to enjoy your long layover.' property='og:description'>
+<meta content='worldpackers://articles/ways-to-make-the-most-of-your-long-layover' property='al:ios:url'>
+<link href='https://www.worldpackers.com/articles/ways-to-make-the-most-of-your-long-layover.amp' rel='amphtml'>
+
+<meta content='website' property='og:type'>
+<meta content='355346121298151' property='fb:app_id'>
+<meta content='1451537908, 519865912, 502780492, 100001925227101' property='fb:admins'>
+<meta content='1133172689' property='al:ios:app_store_id'>
+<meta content='Worldpackers' property='al:ios:app_name'>
+<meta content='app-id=1133172689' name='apple-itunes-app'>
+<meta content='app-id=com.worldpackers.travelers' name='google-play-app'>
+<link href='/images/blue_logo.png' rel='apple-touch-icon'>
+<link href='/images/blue_logo.png' rel='android-touch-icon'>
+<link href='https://www.worldpackers.com/articles/ways-to-make-the-most-of-your-long-layover' rel='canonical'>
+
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta content='367C6D1678A5237D6473081F174BD0F2' name='msvalidate.01'>
+
+<meta content='#158cba' name='theme-color'>
+
+<script src='https://cdn.cookielaw.org/consent/fb4a769e-1800-40c4-bb78-f0afe5cfe0de/OtAutoBlock.js' type='text/javascript'></script>
+<script charset='UTF-8' data-document-language='true' data-domain-script='fb4a769e-1800-40c4-bb78-f0afe5cfe0de' src='https://cdn.cookielaw.org/scripttemplates/otSDKStub.js' type='text/javascript'></script>
+<script>
+  function OptanonWrapper() { }
+</script>
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-55BHGVR');
+</script>
+
+<link rel="stylesheet" media="all" href="/assets/application-73447c2a9eae5b923f6729dccf36016af54b91be7c008bd1c1bc8e0a1ac04a3b.css" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="05BMXRm3FaAk6npdx3uQbSowoLf09ZfgoT0v2Dn0hdIuuNoKCF/ZUkU6U0y9VdH/N+9ln9bwxeI6v5zTMQMX5w==" />
+<link href='/favicon-128.png' rel='icon' sizes='128x128'>
+<link href='/favicon-64.png' rel='icon' sizes='64x64'>
+<link href='/favicon-48.png' rel='icon' sizes='48x48'>
+<link href='/favicon-32.png' rel='icon' sizes='32x32'>
+<link href='/favicon-16.png' rel='icon' sizes='16x16'>
+</head>
+<body class='application white content_layout'>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-55BHGVR' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+
+<header class='navbar navbar-default navbar-two-lines  navbar-bolinhas' role='navigation'>
+<div class='container-fluid'>
+<div class='navbar-top'>
+<a class="navbar-brand" href="https://www.worldpackers.com/"><i class='icon icon-logo'></i>
+<span class='hidden-sm'>Worldpackers</span>
+</a><div class='navbar navbar-responsive'>
+<ul class='nav navbar-nav navbar-left'>
+<li class='dropdown'>
+<a data-toggle="dropdown" id="dropdown_language" class="dropdown-toggle" href="#"><i class='icon icon-grid-earth'></i>
+<span>EN</span>
+</a><ul class='dropdown-menu dropdown-menu-responsive languages-menu no-margin'>
+<li>
+<a id="desktop_select_english" href="/articles/ways-to-make-the-most-of-your-long-layover">EN - English
+</a></li>
+<li>
+<a id="desktop_select_portuguese" href="/pt-BR/articles/ways-to-make-the-most-of-your-long-layover">PT - Portuguese
+</a></li>
+<li>
+<a id="desktop_select_spanish" href="/es/articles/ways-to-make-the-most-of-your-long-layover">ES - Spanish
+</a></li>
+</ul>
+
+</li>
+<li><a href="/help">Help</a></li>
+<li><a class="hidden-sm" href="/how_it_works">How it works</a></li>
+</ul>
+<ul class='nav navbar-nav navbar-right'>
+<li>
+<a id="sign_up_as_host" href="/hosts"><i class='icon icon-location-profile visible-xs'></i>
+Become a Host
+</a></li>
+<li>
+<a id="log_in_menu" href="/users/sign_in"><i class='icon icon-login visible-xs'></i>
+Log In
+</a></li>
+<li>
+<a class="btn btn_small btn_transparent" href="/users/sign_up?ref=unlogged_menu">Sign Up</a>
+</li>
+</ul>
+</div>
+<button class='navbar-toggle' data-target='#main-nav' data-toggle='responsive-menu' type='button'>
+<span class='sr-only'>Toggle navigation</span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+</div>
+<div class='navbar navbar-responsive navbar-bottom' id='main-nav'>
+<button class='close' id='closeMenu'>
+&times;
+</button>
+<ul class='nav navbar-nav navbar-center'>
+<li class='visible-xs'>
+<a href="https://worldpackers.app.link/eTBJ4yVVAG"><i class='icon icon-mobile'></i>
+Download the app
+</a></li>
+<li class='visible-xs'>
+<a href="/how_it_works"><i class='icon icon-info'></i>
+How it works
+</a></li>
+<li class='drawer_dropdown'>
+<a class="dropdown_trigger" href="/search"><i class='icon icon-search'></i>
+Volunteer Opportunities
+</a><div class='drawer_menu'>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-4'>
+<h2 class='h4 mg_bot_10'>Top Destinations</h2>
+<div class='row mg_bot_10'>
+<div class='col-md-6'>
+<ul>
+<li><a href="/search/north_america/united_states">United States</a></li>
+<li><a href="/search/south_america/brazil">Brazil</a></li>
+<li><a href="/search/asia/thailand">Thailand</a></li>
+<li><a href="/search/asia/vietnam">Vietnam</a></li>
+<li><a href="/search/north_america/mexico">Mexico</a></li>
+</ul>
+</div>
+<div class='col-md-6'>
+<ul>
+<li><a href="/search/europe/portugal">Portugal</a></li>
+<li><a href="/search/europe/spain">Spain</a></li>
+<li><a href="/search/europe/united_kingdom">United Kingdom</a></li>
+<li><a href="/search/europe/italy">Italy</a></li>
+<li><a href="/search/central_america/costa_rica"><span class="translation_missing" title="translation missing: en.country.slug.costa_rica">Costa Rica</span></a></li>
+</ul>
+</div>
+</div>
+<a href="/search">See all volunteer opportunities</a>
+</div>
+<div class='col-md-5'>
+<h2 class='h4 mg_bot_10'>What type of experience are you looking for?</h2>
+<div class='row'>
+<div class='col-md-6'>
+<ul>
+<li>
+<a href="/search/type_ngo"><i class='icon icon-ngo'></i>
+NGO
+</a></li>
+<li>
+<a href="/search/type_community"><i class='icon icon-family'></i>
+Community
+</a></li>
+<li>
+<a href="/search/type_school"><i class='icon icon-teaching'></i>
+Non-Profit School
+</a></li>
+<li>
+<a href="/search/type_home_stay"><i class='icon icon-household-chores'></i>
+Homestay
+</a></li>
+<li>
+<a href="/search/type_hostel"><i class='icon icon-hostel'></i>
+Hostel
+</a></li>
+<li>
+<a href="/search/type_camping"><i class='icon icon-tent'></i>
+Camping
+</a></li>
+</ul>
+</div>
+<div class='col-md-6'>
+<ul>
+<li>
+<a href="/search/type_farm"><i class='icon icon-farm'></i>
+Farm
+</a></li>
+<li>
+<a href="/search/type_permaculture"><i class='icon icon-permaculture'></i>
+Permaculture project
+</a></li>
+<li>
+<a href="/search/type_eco_village"><i class='icon icon-eco'></i>
+Eco Village
+</a></li>
+<li>
+<a href="/search/type_holistic_center"><i class='icon icon-holistic-therapies'></i>
+Holistic Center
+</a></li>
+<li>
+<a href="/search/type_guest_house"><i class='icon icon-hostel'></i>
+Guest House
+</a></li>
+<li>
+<a href="/search/type_eco_lodge"><i class='icon icon-eco'></i>
+Eco Lodge
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class='col-md-3'>
+<h2 class='h4 mg_bot_10'>How Worldpackers works</h2>
+<a class="block mg_bot_10" href="/how_it_works"><img width="300" class="rounded block" src="https://res.cloudinary.com/worldpackers/image/asset/c_fill,f_auto,g_auto,q_auto,w_300/how_it_works_v2-4ca1223650dd074f4edf1b2aa9f69746.jpg" />
+</a><a href="/how_it_works">Find out how it works
+<i class='icon icon-arrow left'></i>
+</a></div>
+</div>
+</div>
+
+</div>
+</li>
+<li class='drawer_dropdown'>
+<a class="dropdown_trigger" href="/academy?source=web_menu"><i class='icon icon-courses'></i>
+Academy
+</a><div class='drawer_menu'>
+<div class='container-fluid'>
+<h2 class='h4 mg_bot_10'>Learn from the most experienced travelers of the community</h2>
+<div class='row'>
+<div class='col-md-4'>
+<a class="track-thumb sm worldpackers text_center" href="/academy/worldpackers_courses?source=web_menu"><h3 class='bold white'>Traveling with Worldpackers</h3>
+</a></div>
+<div class='col-md-4'>
+<a class="track-thumb sm planning text_center" href="/academy/travel_courses/sales?source=web_menu"><h3 class='bold white'>Planning and budgeting for travel</h3>
+</a></div>
+<div class='col-md-4'>
+<a class="track-thumb sm nomads text_center" href="/academy/digital_nomad_courses/sales?source=web_menu"><h3 class='bold white'>Make a living while traveling as a lifestyle</h3>
+</a></div>
+</div>
+</div>
+
+</div>
+</li>
+<li class='drawer_dropdown'>
+<a class="dropdown_trigger" href="/blog"><i class='icon icon-articles'></i>
+<span class='hidden-sm'>Community Blog</span>
+<span class='hidden-xs hidden-md hidden-lg'>Blog</span>
+</a><div class='drawer_menu'>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-md-3'>
+<h2 class='h4 mg_bot_10'>
+<a href="/blog/categories/travel-with-worldpackers">Travel with Worldpackers</a>
+</h2>
+<ul class='mg_bot_10'>
+<li><a href="/blog/collections/how-worldpackers-works">How Worldpackers works</a></li>
+<li><a href="/blog/collections/using-worldpackers">Using Worldpackers</a></li>
+<li><a href="/blog/collections/work-exchange">Work exchange</a></li>
+<li><a href="/blog/collections/social-impact">Social impact</a></li>
+</ul>
+</div>
+<div class='col-md-3'>
+<h2 class='h4 mg_bot_10'>
+<a href="/blog/categories/plan-your-trip">Plan your trip</a>
+</h2>
+<ul class='mg_bot_10'>
+<li><a href="/blog/collections/women-traveling">Women traveling</a></li>
+<li><a href="/blog/collections/budget-travel">Budget travel</a></li>
+<li><a href="/blog/collections/solo-travel">Solo travel</a></li>
+<li><a href="/blog/collections/language-learning">Language learning</a></li>
+<li><a href="/blog/collections/travel-tips">Travel tips</a></li>
+<li><a href="/blog/collections/get-inspired">Get inspired</a></li>
+</ul>
+</div>
+<div class='col-md-3'>
+<h2 class='h4 mg_bot_10'>
+<a href="/blog/categories/lifestyle">Lifestyle</a>
+</h2>
+<ul class='mg_bot_10'>
+<li><a href="/blog/collections/digital-nomads">Digital nomads</a></li>
+<li><a href="/blog/collections/travel-jobs">Travel jobs</a></li>
+<li><a href="/blog/collections/personal-development">Personal development</a></li>
+<li><a href="/blog/collections/responsible-travel">Responsible travel</a></li>
+<li><a href="/blog/collections/connect-with-nature">Connect with nature</a></li>
+</ul>
+</div>
+<div class='col-md-3'>
+<h2 class='h4 mg_bot_10'>Top destinations</h2>
+<ul class='mg_bot_20'>
+<li><a href="/blog/collections/south-america">South America</a></li>
+<li><a href="/blog/collections/central-america">Central America</a></li>
+<li><a href="/blog/collections/travel-to-north-america">North America</a></li>
+<li><a href="/blog/categories/europe">Europe</a></li>
+<li><a href="/blog/categories/travel-the-world">More destinations</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+</li>
+<li class='drawer_dropdown'>
+<a class="dropdown_trigger" href="/wp_life?tracking_source=web_menu"><i class='icon icon-videos'></i>
+<span class='hidden-sm'>WP Life</span>
+<span class='hidden-xs hidden-md hidden-lg'>WP Life</span>
+</a></li>
+<li class='drawer_dropdown'>
+<a class="dropdown_trigger" href="/discounts?source=web_menu"><i class='icon icon-host-potencial'></i>
+<span class='hidden-sm'>Exclusive discounts</span>
+<span class='hidden-xs hidden-md hidden-lg'>Discounts</span>
+</a></li>
+<li class='visible-xs'>
+<a href="/users/sign_in"><i class='icon icon-login visible-xs'></i>
+Log In
+</a></li>
+<li class='visible-xs'>
+<a id="sign_up_as_traveler" rel="nofollow" href="/users/sign_up?ref=unlogged_menu"><i class='icon icon-bag visible-xs'></i>
+Sign Up
+</a></li>
+<li class='visible-xs'>
+<a id="sign_up_as_host" href="/hosts"><i class='icon icon-location-profile visible-xs'></i>
+Become a Host
+</a></li>
+<li class='dropdown visible-xs'>
+<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class='icon icon-grid-earth visible-xs'></i>
+English
+<i class='icon icon-angle-down'></i>
+</a><ul class='dropdown-menu dropdown-menu-responsive languages-menu no-margin'>
+<li>
+<a id="mobile_select_english" href="/articles/ways-to-make-the-most-of-your-long-layover">EN - English
+</a></li>
+<li>
+<a id="mobile_select_portuguese" href="/pt-BR/articles/ways-to-make-the-most-of-your-long-layover">PT - Portuguese
+</a></li>
+<li>
+<a id="mobile_select_spanish" href="/es/articles/ways-to-make-the-most-of-your-long-layover">ES - Spanish
+</a></li>
+</ul>
+
+</li>
+
+</ul>
+</div>
+</div>
+</header>
+
+
+
+
+
+
+<!-- / CONTEST CAMPAIGNS || ANNIVERSARY CAMPAIGNS -->
+<a class="top-navigation-banner gray" href="/february2024?source=web_article_banner"><div class='top-navigation-banner gray'>
+<div class='container-fluid'>
+<div class='content'>
+<img width="60" class="mg_right_20" src="https://res.cloudinary.com/worldpackers/image/asset/computer-1999ef44b546a9b461284caa2e0e4ab6.svg" />
+<dl class='lg'>
+<dt>Bring your travels to life with the help of travel experts!</dt>
+<dd>Become a member by Feb 29 and participate in exclusive webinars with experienced travelers.</dd>
+</dl>
+<i class='icon icon-arrow pull-right dark_concrete left'></i>
+</div>
+</div>
+</div>
+</a>
+<div class='application_container container-fluid'>
+<div class='breadcrumbs-top-navigation mg_bot_20'>
+<ul itemscope='' itemtype='http://schema.org/BreadcrumbList'>
+<li itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem'>
+<a itemprop="item" class="link" href="/"><span class='small' itemprop='name'>Home</span>
+</a><meta content='1' itemprop='position'>
+</li>
+<i class='icon icon-chevron-right'></i>
+<li itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem'>
+<a itemprop="item" class="link" href="/blog"><span class='small' itemprop='name'>Blog</span>
+</a><meta content='2' itemprop='position'>
+</li>
+<i class='icon icon-chevron-right'></i>
+<li itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem'>
+<a itemprop="item" class="link" href="/blog/categories/plan-your-trip"><span class='small' itemprop='name'>Plan your trip</span>
+</a><meta content='3' itemprop='position'>
+</li>
+<i class='icon icon-chevron-right'></i>
+<li itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem'>
+<a itemprop="item" class="link" href="/blog/collections/budget-travel"><span class='small' itemprop='name'>Budget travel</span>
+</a><meta content='4' itemprop='position'>
+</li>
+<i class='icon icon-chevron-right'></i>
+<li itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem'>
+<a itemprop="item" class="current-page-link" href="/articles/ways-to-make-the-most-of-your-long-layover"><span class='small' itemprop='name'>17 ways to make the most of your long layover</span>
+</a><meta content='5' itemprop='position'>
+</li>
+</ul>
+</div>
+
+<div class='guides-content'>
+<div class='row'>
+<div class='col-lg-1 col-md-1 hidden-sm hidden-xs sticky-sidebar'>
+<div class='guides-content__floating-thanks'>
+<div class='thanks-wrapper mg_bot_20'>
+<form class="button_to" method="post" action="/contents/1856/thanks"><button class="btn btn_simple thank_you_button" type="submit"><i class='icon icon-thanks'></i>
+6
+</button><input type="hidden" name="authenticity_token" value="YXr3h7xSFiPR707mChb93YMUp84xY3BrvEis+z1lR3OmKyBLQL14OU3ngQ9FlHbX8grgTfe+zlrPOk3UWuUJTw==" /></form>
+</div>
+<div class='show-comments-wrapper mg_bot_20'>
+<div class='show-comments'>
+<a class="btn btn_simple" href="#comments"><i class='icon icon-question'></i>
+
+</a></div>
+
+</div>
+<div class='social-wrapper'>
+<a target="_new" class="btn btn_simple mg_bot_20" data-share="true" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.worldpackers.com%2Farticles%2Fways-to-make-the-most-of-your-long-layover%3Futm_medium%3DFacebook%26utm_source%3DShare_Article"><i class='icon icon-facebook'></i>
+</a><a target="_new" class="btn btn_simple" data-share="true" href="https://twitter.com/intent/tweet?source=tweetbutton&amp;text=17 ways to make the most of your long layover&amp;url=https%3A%2F%2Fwww.worldpackers.com%2Farticles%2Fways-to-make-the-most-of-your-long-layover%3Futm_medium%3DTwitter%26utm_source%3DShare_Article&amp;wrap_links=true"><i class='icon icon-twitter'></i>
+</a>
+</div>
+</div>
+</div>
+<div class='col-lg-7 col-md-7 col-sm-12 col-xs-12'>
+<div class='guides-content-body'>
+<h1 class='display-1 mg_bot_10'>17 ways to make the most of your long layover</h1>
+<p class='huge mg_bot_20'>So you&#39;ve, intentionally, or unintentionally booked yourself a long layover on your next trip. Here are a few suggestions for how to enjoy your long layover.</p>
+<div class='author-thumb mg_bot_20 pull_left'>
+<a class="author-thumb__avatar" href="/allysondobberteen?source=article&amp;subject_id=1856"><img src="https://d34ad2g4hirisc.cloudfront.net/users/avatars/000/845/370/medium/0e109ee474e41f2e4ab92b9652fff2a5.jpg" />
+</a><div class='author-thumb__text'>
+<h4 class='with-separators'>
+<a href="/allysondobberteen?source=article&amp;subject_id=1856"><span>Allyson</span>
+</a></h4>
+<p class='no_margin'>Sep 10, 2021</p>
+</div>
+</div>
+
+<p class='h4 mg_bot_20 pull_right mg_top_5'>
+<i class='icon icon-clock'></i>
+6min
+</p>
+<ul class='pill-links clear'>
+<li><a href="/blog/categories/plan-your-trip">Plan your trip</a></li>
+<li><a href="/blog/collections/budget-travel">Budget travel</a></li>
+</ul>
+<div class='guides-content__article-image mg_bot_30 clear'>
+<img width="1024" class="article-cover" alt="long layover" title="17 ways to make the most of your long layover" src="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/yboi05ezchzelszsvgpz" />
+</div>
+<div class='guides-content__article-sections'>
+<p><p class="">If you have a big wait between <b>connecting flights</b>, you might be wondering <b>what to do during a long layover</b>. I personally love a long layover (it beats too short of one!) and even purposefully know <b>how to schedule a flight with a long layover</b> now.<br></p><p><b>Long layovers</b> might be a drag to some, but they give you an opportunity to approach your travel day with intention. </p><p>I've compiled a creative list of<b> ideas for what to do in a long layover</b>, organized from most time needed to least time needed. </p><h2>What to do during a long layover</h2><ol><li><span style="color: rgb(78, 92, 102); font-size: 20px; font-weight: 300;">Escape the airport on your own to explore the city</span><br></li><li>Take an organized tour of the city</li><li>Book yourself into a transfer hotel</li><li>Try out the local cuisine</li><li>Indulge in the comfort food you've been avoiding</li><li>Take a shower</li><li>Phone a friend</li><li>Find a meditation room </li><li>Set goals for your trip</li><li>Journal about your experience</li><li>Check out the country's Netflix selection</li><li>Organize your memories and photos from the trip </li><li>Go luxe and enjoy an airport lounge </li><li>Go to town on samples in Duty Free</li><li>Post a mandatory Instagram photo </li><li>People watch</li><li>Research and plan for your next potential travel destinations</li></ol><p class=""><b>You might also like:</b> <a href="https://www.worldpackers.com/articles/cheapest-countries-to-visit" target="_blank" rel="noopener noreferrer">14 TOP cheapest countries to visit as a Worldpackers volunteer</a><br></p><figure>
+<br />    <img src="https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/nnax1hlzfzwujaxlbucr" alt="Airplane window views" class="">
+<br /></figure><h3>1. Escape the airport on your own to explore the city</h3><p>If you have a <b>really long layover</b>, you should investigate the possibility of exploring the city you're in. Give this new locale a chance even if the location is far from the top of your bucket list of destinations. You may be surprised to discover a city you'd love to return to for longer. </p><p>Be sure to factor in customs lines and transit times to the city when <b>planning your long layover</b>. Don't overbook your time, be flexible with your itinerary, and don't hesitate to ask locals for help if you need it.</p><p>If you're wondering what to do with your luggage, the airport or nearby train stations may have luggage storage facilities.</p><h3>2. Take an organized tour of the city </h3><p>Some larger airports might offer an organized tour of the city that departs directly from the airport itself. Research options and book the tour before you land if possible. You will still have to go through security and customs as usual, but the organized tour might save you time spent figuring out public transportation systems and directions to major sites. </p><p>I have personally experienced a long layover city tour in Seoul, South Korea where the airport offers tours ranging in time from 2-7 hours. It was a low stress way to <b>make the most of a long layover</b> there. </p><h3>3. Book yourself into a transfer hotel</h3><p>Many large airports have transfer hotels that are made for weary <b>travelers with long layovers</b>. Some transfer hotels are located inside security, negating the need to allow for extra time. Others are located land-side requiring you to go through security an extra time.</p><p>Most transfer hotels are booked by the hour or half-day, making them surprisingly economical for those <b>long layovers</b> when all you really want is a nap. </p><h3>4. Take a shower </h3><p>Did you know that many airports offer free or low-cost shower facilities? If you want to feel refreshed, this is usually a great way to go. Check the airport gym or ask a help desk where shower facilities are located. </p><p>Most airport shower facilities also offer toiletry kits and towels for a low rental cost, just in case you didn't bring your own. </p><p>Even if the airport itself doesn't provide showers, many airport lounges do. Consider <b>purchasing a day pass to an airport lounge</b> to get access to showers (and usually free food, drink, and WiFi too). </p><h3>5. Try out the local cuisine</h3><p>Even if your layover isn't quite long enough to get out and explore the city, you can still find plenty of opportunities to <a href="https://www.worldpackers.com/articles/tips-on-how-to-immerse-yourself-in-local-culture" target="_blank" rel="noopener noreferrer">immerse yourself in local culture</a>. Cuisine is often the most direct, and cheapest, way to experience a taste of a culture different than your own. </p><p>Seek out the local cuisine located inside the airport. You might be surprised by the <b>immersive experience</b> you can have without even leaving the terminal. </p><figure>
+<br />    <img src="https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/y2ryakjbtyguxzylt6uk" alt="Indian food" class="">
+<br /></figure><h3>6. Indulge in the comfort food you've been avoiding</h3><p>Alternatively, <b>use your long layover to treat yourself</b> to a fast food meal or comfort from home that you've tried to avoid during your trip. Get the french fries. Find the Tex-Mex. Indulge in a treat that makes your long layover more comfortable. </p><h3>7. Phone a friend</h3><p>If you've been traveling for a while, you're probably guilty of a major traveler faux pas. You don't keep in touch with family and friends as well as you should. </p><p>Use the time you have to waste on this <b>long stopover</b> to catch up. That friend you were always meaning to call back? Give her a ring right this second. </p><h3>8. Find a meditation room </h3><p>Even if you don't meditate, meditation rooms offer a calm respite from the hustle and bustle of the airport. Give yourself a few minutes of quiet downtime <b>during your long layover</b>. </p><h3>9. Set goals for your trip</h3><p>If you have a long layover at the start of your trip, consider setting aside some time for goal setting. You may want to connect more deeply with your travel companions, find new <a href="https://www.worldpackers.com/articles/ways-to-step-out-of-your-comfort-zone-while-traveling" target="_blank" rel="noopener noreferrer">ways to step out of your comfort zone</a>, immerse yourself in a new language, or just take vacation relaxation to a new level. </p><p>Give yourself the time to ruminate on your travel (or life!) goals <b>during your next long layover</b>. </p><figure>
+<br />    <img src="https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/hdv43g4gc6vnilb0lpyk" alt="Journal and coffee" class="">
+<br /></figure><h3>10. Journal about your experience</h3><p>If you're on the tail end of your travel journey, a <b>great way to spend time during a long layover </b>is to <a href="https://www.worldpackers.com/articles/travel-journal-ideas" target="_blank" rel="noopener noreferrer">journal</a>. Your travel stories are fresh in your mind, so make sure to document them while you can. </p><h3 class="">11. Check out the country's Netflix selection</h3><p class="">This isn't exactly culturally immersive or all that meaningful, but it can be fun to explore a new country's Netflix selection. It might give you a glimpse at what's popular in that country and might even help you with language retention. </p><p class="">I have fond memories of watching the Great British Bake-Off in London Heathrow when I was pouting about leaving Great Britain and my travel companions there behind.</p><h3>12. Organize your memories and photos from the trip</h3><p>I'm the worst at actually editing and organizing my trip photos after I travel. My camera's memory cards sit full for weeks and photos go un-cherished for far too long. </p><p>If you have a long layover when returning from your trip, consider this as a great idea for <b>what to do on a long layover</b>. </p><p class="">I find that it's easier to edit photos and document memories when I still have momentum from the trip. Spend a little while backing up your photos, choosing the best shots, and sharing with friends and family before you head home to the grind of daily life. </p><figure>
+<br />    <img src="https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/w5jmu8fhfuzholqwhzvg" alt="Airport lounge, Taiwan International Airport" class="">
+<br /></figure><h3 class="">13. Go luxe and enjoy an airport lounge </h3><p class="">I often think of airport lounges for first class passengers only, but those days are long gone. Now, you can purchase an airport lounge pass and enjoy free drinks, snacks, WiFi and sometimes even sleeping or showering facilities. </p><h3>14. Go to town on samples in Duty Free</h3><p>Bored with a <b>long layover ahead of you</b>? Make the duty free shop your friend. Get samples of all of the fancy lotions and perfumes. You might even be able to try some sweet local treats if they're offering samples.  </p><h3>15. Post a mandatory Instagram photo </h3><p>You know that dreamy airplane window shot you took right before landing? You're given a free pass to post it, no matter how cliché or cheesy, when you're trying to <b>make the most of a long layover</b>. </p><h3>16. People watch</h3><p>Is there anything better than airport people watching? I love to imagine who people are, where they're off to, and how they might spend their time there when I people watch in airports. </p><p>Better yet, strike up a conversation and <b>enjoy your long layover</b> with a new friend. </p><h3 style="">17. Research and plan for your next potential travel destinations</h3><p class="" style="">There's no better time to get excited about potential future travel destinations than while traveling. If you have a <b>long connection flight</b> and are wondering <b>what to do during your long layover</b>, why not browse <a href="https://www.worldpackers.com/" target="_blank" rel="noopener noreferrer">Worldpackers</a> for inspiration for your next trip?</p><p class="" style="">Worldpackers is a <b>collaborative travel communit</b>y that allows you to <a href="https://www.worldpackers.com/articles/best-ways-to-save-money-while-traveling" target="_blank" rel="noopener noreferrer">save tons of money while traveling</a> by exchanging your skills for free accommodation. There are opportunities to work with <a href="https://www.worldpackers.com/search/type_hostel" target="_blank" rel="noopener noreferrer">hostels</a>, <a href="https://www.worldpackers.com/search/type_ngo" target="_blank" rel="noopener noreferrer">NGOs</a>, <a href="https://www.worldpackers.com/search/type_school" target="_blank" rel="noopener noreferrer">schools</a>,&nbsp;<a href="https://www.worldpackers.com/search/type_eco_village" target="_blank" rel="noopener noreferrer">ecovillages</a>, and more. This is a great way to practice <a href="https://www.worldpackers.com/articles/responsible-travel-for-the-solo-adventurer" target="_blank" rel="noopener noreferrer">responsible travel</a>&nbsp;and enjoy a truly local, immersive experience in your destination.</p><figure>
+<br />    <img src="https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/x6pfpisz3aq4qqk5ernh" alt="Flying over a mountain range" class="">
+<br /></figure><h2>Need location-specific ideas on how to spend a long layover?</h2><p>There are many resources available to you, regardless of<b> where your long layover is located</b>. I usually check the website <a href="https://www.sleepinginairports.net/" target="_blank" rel="noopener noreferrer">Sleeping in Airports </a>for helpful information on facilities and you guessed it, best sleeping locations.</p><p>For more information, your layover airport's website itself might also lead you to information about organized tours, facilities, or unique art to spot inside each terminal. </p><h3>How do you like to spend a long layover? Tell me in the comments!</h3></p>
+</div>
+
+</div>
+</div>
+<div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 sticky-sidebar guides-content__right-bar'>
+<div class='box img_background hidden-sm hidden-xs text_center'>
+<h2 class='h3 white mg_bot_10'>Join the community!</h2>
+<p class='lg white mg_bot_20'>Create a free Worldpackers account to discover volunteer experiences perfect for you and get access to exclusive travel discounts!</p>
+<!-- / CONTEST CAMPAIGNS -->
+<!-- / ANNIVERSARY CAMPAIGNS -->
+<!-- / DISCOUNT CAMPAIGNS -->
+<a class="btn btn_primary btn_lg btn_block mg_bot_10" href="/users/sign_up?next_url=%2Farticles%2Fways-to-make-the-most-of-your-long-layover">Create your account</a>
+<a class="white lg block mg_bot_20" href="/how_it_works">How it works</a>
+<ul class='social-links inline text_center'>
+<li>
+<a itemprop="sameAs" target="_blank" class="btn btn_social btn_transparent" href="https://www.instagram.com/worldpackers"><span class='invisible'>Instagram</span>
+<i class='icon icon-instagram'></i>
+</a></li>
+<li>
+<a itemprop="sameAs" target="_blank" class="btn btn_social btn_transparent" href="https://www.tiktok.com/@worldpackers"><span class='invisible'>TikTok</span>
+<i class='icon icon-tiktok'></i>
+</a></li>
+
+</ul>
+
+</div>
+
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-7 col-md-7 col-sm-12 col-xs-12 col-lg-offset-1 col-mg-offset-1'>
+<hr class='mg_bot_20'>
+<div class='guides-content__author'>
+<div class='author-thumb huge'>
+<a class="author-thumb__avatar" href="/allysondobberteen?source=article&amp;subject_id=1856"><img src="https://d34ad2g4hirisc.cloudfront.net/users/avatars/000/845/370/medium/0e109ee474e41f2e4ab92b9652fff2a5.jpg" />
+</a><div class='author-thumb__text'>
+<div class='header_info'>
+<h3><a href="/allysondobberteen?source=article&amp;subject_id=1856">Allyson Dobberteen</a></h3>
+</div>
+<div class='header_action'>
+<a data-toggle="modal" data-target="#traveler_registration_modal" class="btn btn_secondary btn_small btn-message" href="#">Send a message
+</a>
+</div>
+<p class='lg no_margin clear'>Allyson quit her corporate marketing job in July 2018 and has been traveling the world through work exchange ever since. The highlight reel includes tutoring English while sailing in Greece and becoming a live-in nanny for a traveling family in New Zealand and Australia. </p>
+<div class='row mg_top_20'>
+<div class='col-lg-4 col-md-4 col-sm-4 col-xs-6 mg_bot_10'>
+<a target="_blank" class="lebleu block text_ellipsis" href="/allysondobberteen?source=article&amp;subject_id=1856"><i class='icon lebleu icon-logo icon-reset'></i>
+Worldpackers
+</a></div>
+<div class='col-lg-4 col-md-4 col-sm-4 col-xs-6 mg_bot_10'>
+<a target="_blank" class="lebleu block text_ellipsis" href="https://www.pagestopassport.com"><i class='icon lebleu icon-link'></i>
+Website
+</a></div>
+<div class='col-lg-4 col-md-4 col-sm-4 col-xs-6 mg_bot_10'>
+<a target="_blank" class="lebleu block text_ellipsis" href="https://www.instagram.com/pagestopassport"><i class='icon lebleu icon-instagram'></i>
+Instagram
+</a></div>
+</div>
+</div>
+</div>
+<div class='travelers_registration_modal modal full-screen fade' id='traveler_registration_modal'>
+<div class='modal-dialog'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<i class='icon icon-cross no_margin'></i>
+</button>
+<div class='modal-content'>
+<div class='modal-body'>
+<h2 class='text_center'>
+Be part of the Worldpackers Community
+</h2>
+<a class="btn btn_huge btn_block btn_facebook" data-disable-with="Signing up..." data-track="sign_up_facebook" href="/users/auth/facebook?locale=en&amp;next_url=%2Fconversations%2Fopen%2F845370%3Fexpert%3Dtrue&amp;skip_accepted_terms_validation=true&amp;utm_nooverride=1"><i class='icon icon-facebook'></i>
+Continue with Facebook
+</a><div class='or'>or</div>
+<a class="btn btn_huge btn_block btn_email" id="sign_up_with_email_btn" href="#"><i class='icon icon-inbox-full'></i>
+Sign up with Email
+</a><form class="register_form inactive" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="m8DRUTPpP1FOcE5UyHlZFWhGQiL/EwHG154JYKjI58I6RkaWs6p3n9+VR8XzQOBSncAEvw6uVDlB+VsgLih4GA==" /><input type="hidden" name="next_url" id="next_url" value="/conversations/open/845370?expert=true" />
+<input type="hidden" name="ref" id="ref" />
+<input value="volunteer" type="hidden" name="user[role]" id="user_role" />
+<div class='form_group'>
+<input autofocus="autofocus" placeholder="Your first name" class="form_input name_input" type="text" name="user[first_name]" id="user_first_name" />
+
+</div>
+<div class='form_group'>
+<input placeholder="Your last name" class="form_input name_input" type="text" name="user[last_name]" id="user_last_name" />
+
+</div>
+<div class='form_group'>
+<input placeholder="Email" class="form_input email_input" type="email" value="" name="user[email]" id="user_email" />
+
+</div>
+<div class='form_group'>
+<input autocomplete="off" placeholder="Create a password" class="form_input password_input" type="password" name="user[password]" id="user_password" />
+
+</div>
+<div class='form_group'>
+<select class="form_input gender_input" name="user[gender]" id="user_gender"><option value=""><span class="translation_missing" title="translation missing: en.registrations.fields.gender">Gender</span></option>
+<option value="F">Female &quot;She loves to travel!!&quot;</option>
+<option value="M">Male &quot;He loves to travel!&quot;</option>
+<option value="N">Neutral &quot;This person loves to travel!&quot;</option></select>
+
+</div>
+<div class='form_group'>
+<label class="block" for="user_birthday">Your birthday</label>
+<select id="user_birthday_2i" name="user[birthday(2i)]" class="form_input form_date">
+<option value="">Month</option>
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+<select id="user_birthday_3i" name="user[birthday(3i)]" class="form_input form_date">
+<option value="">Day</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select id="user_birthday_1i" name="user[birthday(1i)]" class="form_input form_date">
+<option value="">Year</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+<option value="1978">1978</option>
+<option value="1977">1977</option>
+<option value="1976">1976</option>
+<option value="1975">1975</option>
+<option value="1974">1974</option>
+<option value="1973">1973</option>
+<option value="1972">1972</option>
+<option value="1971">1971</option>
+<option value="1970">1970</option>
+<option value="1969">1969</option>
+<option value="1968">1968</option>
+<option value="1967">1967</option>
+<option value="1966">1966</option>
+<option value="1965">1965</option>
+<option value="1964">1964</option>
+<option value="1963">1963</option>
+<option value="1962">1962</option>
+<option value="1961">1961</option>
+<option value="1960">1960</option>
+<option value="1959">1959</option>
+<option value="1958">1958</option>
+<option value="1957">1957</option>
+<option value="1956">1956</option>
+<option value="1955">1955</option>
+<option value="1954">1954</option>
+<option value="1953">1953</option>
+<option value="1952">1952</option>
+<option value="1951">1951</option>
+<option value="1950">1950</option>
+<option value="1949">1949</option>
+<option value="1948">1948</option>
+<option value="1947">1947</option>
+<option value="1946">1946</option>
+<option value="1945">1945</option>
+<option value="1944">1944</option>
+<option value="1943">1943</option>
+<option value="1942">1942</option>
+<option value="1941">1941</option>
+<option value="1940">1940</option>
+</select>
+
+
+</div>
+<script src="https://www.recaptcha.net/recaptcha/enterprise.js?render=6LcmDfUlAAAAAGply_0RyUuaxhspmQ161EmHrpGY"   ></script>
+        <script>
+          // Define function so that we can call it again later if we need to reset it
+          // This executes reCAPTCHA and then calls our callback.
+          function executeRecaptchaForRegistration() {
+            grecaptcha.enterprise.ready(function() {
+              grecaptcha.enterprise.execute('6LcmDfUlAAAAAGply_0RyUuaxhspmQ161EmHrpGY', {action: 'registration'}).then(function(token) {
+                setInputWithRecaptchaResponseTokenForRegistration('g-recaptcha-response-data-registration', token)
+              });
+            });
+          };
+          // Invoke immediately
+          executeRecaptchaForRegistration()
+
+          // Async variant so you can await this function from another async function (no need for
+          // an explicit callback function then!)
+          // Returns a Promise that resolves with the response token.
+          async function executeRecaptchaForRegistrationAsync() {
+            return new Promise((resolve, reject) => {
+             grecaptcha.enterprise.ready(async function() {
+                resolve(await grecaptcha.enterprise.execute('6LcmDfUlAAAAAGply_0RyUuaxhspmQ161EmHrpGY', {action: 'registration'}))
+              });
+            })
+          };
+
+                  var setInputWithRecaptchaResponseTokenForRegistration = function(id, token) {
+          var element = document.getElementById(id);
+          if (element !== null) element.value = token;
+        }
+
+        </script>
+<input type="hidden" name="g-recaptcha-response-data[registration]" id="g-recaptcha-response-data-registration" data-sitekey="6LcmDfUlAAAAAGply_0RyUuaxhspmQ161EmHrpGY" class="g-recaptcha g-recaptcha-response "/>
+
+<div class='form_group'>
+<input name="user[newsletter_opt_in]" type="hidden" value="0" /><input class="form_input" type="checkbox" value="1" checked="checked" name="user[newsletter_opt_in]" id="user_newsletter_opt_in" />
+<label for="user_newsletter_opt_in">I want to receive hosts recommended for me, travel tips, inspiring stories and upcoming opportunities.</label>
+</div>
+<div class='form_group'>
+<input class="form_input" data-form-check-box="" type="checkbox" value="February 11, 2024" name="user[accepted_terms_at]" id="user_accepted_terms_at" />
+<label for="user_accepted_terms_at">I accept the Worldpackers <a href="/terms">terms of use</a> and <a href="/privacy">privacy</a>.</label>
+</div>
+<input type="submit" name="commit" value="Sign up" class="btn btn_huge btn_primary btn_block" disabled="disabled" data-disable-with="Signing up..." data-track="sign_up_completed" data-form-submit="" />
+</form><div class='row'>
+<div class='col-xs-6'>
+<div class='login'>
+<h5>Already have an account?</h5>
+<a href="/users/sign_in">Log In.</a>
+</div>
+</div>
+<div class='col-xs-6'>
+<div class='hosts'>
+<h5>Are you a Host?</h5>
+<a href="/hosts/sign_up">Continue as a host.</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class='guides-content-comment'>
+<hr>
+<div class='mg_bot_50'>
+<div class='content-comments' id='comments'>
+<h3 class='mg_bot_10'>Leave your comment here</h3>
+<p class='mg_bot_30'>Write here your questions and greetings to the author</p>
+<div class='comments-list'>
+
+</div>
+<nav class='navbar-default login-to-comment-banner'>
+<div class='flex-container'>
+<div class='content-container'>
+<div class='text-container'>
+<h4 class='white'>Log in to comment</h4>
+</div>
+</div>
+<div class='button-container'>
+<a class="btn btn_sm btn_transparent light" href="/users/sign_in">Log In</a>
+</div>
+</div>
+</nav>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class='guides-content__floating-thanks-xs hidden-lg hidden-md'>
+<div class='thanks-wrapper'>
+<form class="button_to" method="post" action="/contents/1856/thanks"><button class="btn btn_secondary btn_thanks hidden-xs thank_you_button" type="submit"><i class='icon icon-thanks'></i>
+</button><input type="hidden" name="authenticity_token" value="AVzijVHZcpRfx9jsXZngKldjoK/gikKL4Tve7HvbHz3GDTVBrTYcjsPPFwUSG2sgJn3nLCZX/LqSST/DHFtRAQ==" /></form>
+</div>
+</div>
+</div>
+</div>
+
+<section class='landing-page__section secondary sm'>
+<div class='container-fluid'>
+<h3 class='mg_bot_20'>More about this topic</h3>
+<div class='row js-articles articles-list'>
+<div class='col-lg-4 col-md-4 col-sm-6'>
+<a class="main-thumb content-thumb-lg vertical" href="https://www.worldpackers.com/articles/ways-to-trick-yourself-into-saving-money-for-travel?source=footer_suggestions"><div class='content-image'>
+<img class="rounded" data-lazy="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,g_west,h_200,q_auto,w_330/v1/guides/article_cover/fwf5bjhrnqf8hbyshqm7" src="https://res.cloudinary.com/worldpackers/image/asset/content_placeholder-54f17d8ddb1cadbad2344a66ed3ce16d.png" />
+<div class='content-icon-wrapper'>
+<i class='icon icon-article-thin white shadow'></i>
+</div>
+</div>
+<div class='content-thumb-text'>
+<h3 class='h4'>19 ways to trick yourself into saving money for travel</h3>
+<div class='content-thumb-description'>
+<div class='author content-thumb__author'>
+<img class="rounded avatar" src="https://d34ad2g4hirisc.cloudfront.net/users/avatars/000/845/370/medium/0e109ee474e41f2e4ab92b9652fff2a5.jpg" />
+<h5 class='regular author-text text_ellipsis'>
+Allyson
+</h5>
+<hr class='vertical'>
+</div>
+<ul class='sm tags inline'>
+<li class='dark-concrete'>
+<i class='icon icon-clock'></i>
+10min
+</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+<div class='col-lg-4 col-md-4 col-sm-6'>
+<a class="main-thumb content-thumb-lg vertical" href="https://www.worldpackers.com/articles/how-to-satisfy-your-wanderlust-without-spending-a-fortune?source=footer_suggestions"><div class='content-image'>
+<img class="rounded" data-lazy="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,g_west,h_200,q_auto,w_330/v1/guides/article_cover/komwxktc6znswj1sfpug" src="https://res.cloudinary.com/worldpackers/image/asset/content_placeholder-54f17d8ddb1cadbad2344a66ed3ce16d.png" />
+<div class='content-icon-wrapper'>
+<i class='icon icon-article-thin white shadow'></i>
+</div>
+</div>
+<div class='content-thumb-text'>
+<h3 class='h4'>How to satisfy your wanderlust without spending a fortune</h3>
+<div class='content-thumb-description'>
+<div class='author content-thumb__author'>
+<img class="rounded avatar" src="https://d34ad2g4hirisc.cloudfront.net/users/avatars/001/052/078/medium/6cfdf7d407dcebd8f1406c3b09987f62.jpg" />
+<h5 class='regular author-text text_ellipsis'>
+Helen
+</h5>
+<hr class='vertical'>
+</div>
+<ul class='sm tags inline'>
+<li class='dark-concrete'>
+<i class='icon icon-clock'></i>
+10min
+</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+<div class='col-lg-4 col-md-4 col-sm-6'>
+<a class="main-thumb content-thumb-lg vertical" href="https://www.worldpackers.com/articles/places-to-travel-in-your-20s-on-a-budget?source=footer_suggestions"><div class='content-image'>
+<img class="rounded" data-lazy="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,g_west,h_200,q_auto,w_330/v1/guides/article_cover/kv0ziigy5ywgwdek2ka9" src="https://res.cloudinary.com/worldpackers/image/asset/content_placeholder-54f17d8ddb1cadbad2344a66ed3ce16d.png" />
+<div class='content-icon-wrapper'>
+<i class='icon icon-article-thin white shadow'></i>
+</div>
+</div>
+<div class='content-thumb-text'>
+<h3 class='h4'>15 best places to travel in your 20&#39;s on a budget</h3>
+<div class='content-thumb-description'>
+<div class='author content-thumb__author'>
+<img class="rounded avatar" src="https://d34ad2g4hirisc.cloudfront.net/users/avatars/000/136/137/medium/69d45c4b61a7e3db73346c009be8ff22.jpg" />
+<h5 class='regular author-text text_ellipsis'>
+Gabrielle
+</h5>
+<hr class='vertical'>
+</div>
+<ul class='sm tags inline'>
+<li class='dark-concrete'>
+<i class='icon icon-clock'></i>
+15min
+</li>
+</ul>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<div class='guides-content__footer-banner'>
+<section class='landing-page__section highlight how-it-works-banner'>
+<div class='container-fluid text_center'>
+<h3 class='h1 mg_bot_10 text_center'>How do Worldpackers trips work?</h3>
+<p class='huge mg_bot_40 text_center'>As a member, you can contact as many hosts and travel safely as many times as you want.</p>
+<div class='js-how-it-works-banner'>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_1-2bda6d3d8e0d71ce22ac98d30cb994fb.svg" />
+<p class='lg no_margin'>Choose your plan to travel with Worldpackers as many times as you like.</p>
+</div>
+</div>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_2-0e8426248cfc193cc0566751f9ec2be6.svg" />
+<p class='lg no_margin'>Complete your profile, watch the video lessons in the Academy, and earn certificates to stand out to hosts.</p>
+</div>
+</div>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_3-517cea1ce2694e2456c147c62405f7d8.svg" />
+<p class='lg no_margin'>Apply to as many positions as you like, and get in contact with our verified hosts.</p>
+</div>
+</div>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_4-8397adf459bfd412437cdf76ddf602bf.svg" />
+<p class='lg no_margin'>If a host thinks you’re a good fit for their position, they’ll pre-approve you.</p>
+</div>
+</div>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_5-b4ef7dddb69f283b7e81f24aaf21aa8c.svg" />
+<p class='lg no_margin'>Get your documents and tickets ready for your volunteer trip.</p>
+</div>
+</div>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_6-0ec5ec8e5a3f353020bea6a3b18f3b51.svg" />
+<p class='lg no_margin'>Confirm your trip to enjoy all of the safety of Worldpackers.</p>
+</div>
+</div>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_7-4ce363635223e595014a894202e3651c.svg" />
+<p class='lg no_margin'>Have a transformative experience and make a positive impact on the world.</p>
+</div>
+</div>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_8-3b6e34fe174303071a3b1b8631787607.svg" />
+<p class='lg no_margin'>If anything doesn’t go as planned with a host, count on the WP Safeguard and our highly responsive support team!</p>
+</div>
+</div>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_9-e605832bb4ad91fdc68cf8de040f9716.svg" />
+<p class='lg no_margin'>After volunteering, you and your host exchange reviews.</p>
+</div>
+</div>
+<div class='slider_holder'>
+<div class='box shadow text_center how_it_works lg'>
+<img height="120" class="mg_bot_10" loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/step_10-499b2d59f37a08747eb19cb2f1821b88.svg" />
+<p class='lg no_margin'>With positive reviews, you’ll stand out to hosts and get even more benefits.</p>
+</div>
+</div>
+</div>
+<a class="btn btn_primary btn_lg min_width mg_bot_20" href="/get_verified">Check out all our plans</a>
+<a class="white lg block" href="/how_it_works">Learn more about how it works</a>
+</div>
+</section>
+
+</div>
+<footer class='footer'>
+<div class='container-fluid footer__top'>
+<div class='row'>
+<div class='col-lg-3 col-md-3 top__social mg_bot_20'>
+<div class='row'>
+<div class='col-lg-12 col-md-12 col-sm-4 mg_bot_20'>
+<a class="icon icon-logo" href="/">Worldpackers</a>
+<ul class='inline' itemscope='' itemtype='http://schema.org/Organization'>
+<a class='invisible' href='https://www.worldpackers.com' itemprop='url'></a>
+<span class='invisible' content='Worldpackers' itemprop='name'></span>
+<meta content='https://www.worldpackers.com/images/logo.png' itemprop='logo'>
+<li>
+<a itemprop="sameAs" target="_blank" class="btn btn_social btn_transparent" href="https://www.instagram.com/worldpackers"><span class='invisible'>Instagram</span>
+<i class='icon icon-instagram'></i>
+</a></li>
+<li>
+<a itemprop="sameAs" target="_blank" class="btn btn_social btn_transparent" href="https://www.tiktok.com/@worldpackers"><span class='invisible'>TikTok</span>
+<i class='icon icon-tiktok'></i>
+</a></li>
+
+</meta>
+</ul>
+</div>
+<div class='col-lg-12 col-md-12 col-sm-4'>
+<div class='mobile-buttons'>
+<a target="_blank" class="block mg_bot_10" href="https://worldpackers.app.link/Ci7YT8Qe4C"><img loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/app_store_official-0a4559b429f36fdc7e7f89fd152f6a41.svg" />
+</a></div>
+</div>
+<div class='col-lg-12 col-md-12 col-sm-4'>
+<div class='mobile-buttons'>
+<a target="_blank" class="block" href="https://worldpackers.app.link/KWqjFQNe4C"><img loading="lazy" src="https://res.cloudinary.com/worldpackers/image/asset/google_play_official-18b9fa84dddd263f0f07fc55070c1663.svg" />
+</a></div>
+</div>
+</div>
+</div>
+<div class='col-lg-9 col-md-9 top__links'>
+<div class='row'>
+<div class='col-lg-4 col-md-4 col-sm-4'>
+<hr class='visible-xs'>
+<dl>
+<dt class='footer_links_title mg_bot_5'>
+<i class='icon icon-angle-down visible-xs'></i>
+Volunteer Abroad
+</dt>
+<dd><a href="/search/south_america">Volunteering in South America</a></dd>
+<dd><a href="/search/north_america">Volunteering in North America</a></dd>
+<dd><a href="/search/central_america">Volunteering in Central America</a></dd>
+<dd><a href="/search/europe">Volunteering in Europe</a></dd>
+<dd><a href="/search/africa">Volunteering in Africa</a></dd>
+<dd><a href="/search/asia">Volunteering in Asia</a></dd>
+<dd><a href="/search/southeast_asia">Volunteering in Southeast Asia</a></dd>
+<dd><a href="/search/middle_east">Volunteering in Middle East</a></dd>
+<dd class='mg_bot_20'><a href="/search/oceania">Volunteering in Oceania</a></dd>
+</dl>
+</div>
+<div class='col-lg-4 col-md-4 col-sm-4'>
+<hr class='visible-xs'>
+<dl>
+<dt class='footer_links_title mg_bot_5'>
+<i class='icon icon-angle-down visible-xs'></i>
+Learn and share your skills
+</dt>
+<dd><a href="/search?skills%5B%5D=reception">Reception</a></dd>
+<dd><a href="/search?skills%5B%5D=gardening">Gardening</a></dd>
+<dd><a href="/search?skills%5B%5D=social_media">Social Media</a></dd>
+<dd><a href="/search?skills%5B%5D=administration">Administration</a></dd>
+<dd><a href="/search?skills%5B%5D=housekeeping">Housekeeping</a></dd>
+<dd><a href="/search?skills%5B%5D=photography">Photography</a></dd>
+<dd><a href="/search?skills%5B%5D=party_promoter">Party Promoter</a></dd>
+<dd><a href="/search?skills%5B%5D=kitchen_hand">Kitchen Hand</a></dd>
+<dd><a href="/search?skills%5B%5D=child_care">Child Care</a></dd>
+<dd><a href="/search?skills%5B%5D=content_writer">Content Writer</a></dd>
+<dd class='mg_bot_20'><a href="/search?skills%5B%5D=teaching_languages">Teaching Languages</a></dd>
+</dl>
+<hr class='visible-xs'>
+</div>
+<div class='col-lg-4 col-md-4 col-sm-4'>
+<dl class='mg_bot_20'>
+<dt class='footer_links_title mg_bot_5'>
+<i class='icon icon-angle-down visible-xs'></i>
+Collaborative experiences
+</dt>
+<dd><a href="/search/type_hostel">Hostel</a></dd>
+<dd><a href="/search/type_pousada">Pousada</a></dd>
+<dd><a href="/search/type_camping">Camping</a></dd>
+<dd><a href="/search/type_homestay">Homestay</a></dd>
+<dd><a href="/search/type_guest_house">Guest House</a></dd>
+<dd><a href="/search/type_holistic_center">Holistic Center</a></dd>
+<dd><a href="/search/type_ngo">NGO</a></dd>
+<dd><a href="/search/type_school">School</a></dd>
+<dd><a href="/search/type_community">Community</a></dd>
+<dd><a href="/search/type_eco_village">Eco village</a></dd>
+<dd><a href="/search/type_farm">Farm</a></dd>
+<dd><a href="/search/type_permaculture">Permaculture Project</a></dd>
+</dl>
+<hr class='visible-xs'>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-4 col-md-4 col-sm-4'>
+<dl>
+<dt class='footer_links_title mg_bot_5'>
+<i class='icon icon-angle-down visible-xs'></i>
+Travel with Worldpackers
+</dt>
+<dd><a href="/get_verified">Become a Member</a></dd>
+<dd><a href="/search?accepts_partners=true">Travel as a couple or with a friend</a></dd>
+<dd><a href="/academy">Academy</a></dd>
+<dd><a href="/blog">Blog</a></dd>
+<dd><a href="/community">Community</a></dd>
+<dd><a href="/how_it_works">How it works</a></dd>
+<dd><a href="/volunteering">Travel as a volunteer</a></dd>
+<dd><a href="/safety">Travel safely</a></dd>
+<dd><a href="https://www.worldpackers.com/help">Help Center</a></dd>
+</dl>
+</div>
+<div class='col-lg-4 col-md-4 col-sm-4'>
+<hr class='visible-xs'>
+<dl>
+<dt class='footer_links_title mg_bot_5'>
+<i class='icon icon-angle-down visible-xs'></i>
+For Hosts
+</dt>
+<dd><a href="/hosts">Become a Host</a></dd>
+<dd><a href="/help/hosts">How it works</a></dd>
+<dd><a href="/help">Help Center</a></dd>
+<dd><a href="/top_host?source=footer">Top Hosts</a></dd>
+</dl>
+</div>
+<div class='col-lg-4 col-md-4 col-sm-4'>
+<hr class='visible-xs'>
+<dl>
+<dt class='footer_links_title mg_bot_5 dt-title'>
+<i class='icon icon-angle-down visible-xs'></i>
+Institutional
+</dt>
+<dd><a href="/about-us">About us</a></dd>
+<dd><a href="/sitemap">Sitemap</a></dd>
+<dd><a href="/terms">Terms</a></dd>
+<dd><a href="/privacy">Privacy</a></dd>
+<dd><a class="ot-sdk-show-settings" href="#">Cookie settings</a></dd>
+<hr class='visible-xs'>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class='hidden-xs'>
+<div class='container-fluid footer__bottom'>
+<p><a class="white" href="https://www.worldpackers.com/help">Need help? Visit our Help Center.</a></p>
+<p class='small'>
+© 2024 Worldpackers Corp • 299 Alhambra Circle. Suite 403. Coral Gables, FL 33134.
+</p>
+</div>
+</footer>
+
+<nav class='navbar-default navbar-fixed-bottom cta-bar'>
+<div class='flex-container'>
+<div class='content-container'>
+<div class='icon-container'>
+<i class='icon icon-logo'></i>
+</div>
+<div class='text-container'>
+Join the community and get access to exclusive travel discounts!
+</div>
+</div>
+<div class='button-container mg_left_5'>
+<a class="btn btn_sm btn_primary" href="/users/sign_up?next_url=%2Fdiscounts%3Fsource%3Dweb_blog_footer">Register now</a>
+</div>
+</div>
+</nav>
+<div class='space-for-cta-bar'></div>
+
+
+
+<meta content='false' property='tracker_logged'>
+<script src="/assets/application-9feba155e0e934dd290a74f74f42a6e930ff5ea4b4dcb64d915096a422971c60.js"></script>
+
+<script>
+  window.addEventListener('load', function() {
+    if (typeof SmartAppBanner !== "undefined") {
+      new SmartAppBanner();
+    }
+  })
+</script>
+
+
+</body>
+</html>
+

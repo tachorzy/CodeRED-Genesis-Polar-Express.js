@@ -10,7 +10,7 @@ from llama_index.storage.storage_context import StorageContext
 import datetime
 
 plainTextToAPIPrompt = """You are Amadeus api prompt creator. Using your knowledge of the Amadeus api convert a plain text request into a Get request to the api.
-Keep in mind that the api url is https://test.api.amadeus.com/ and there are some manditory paramaters. if a date is not specified use the  {date}. If number of adults is not speicifed assume 1 adult. 
+Keep in mind that the api url is https://test.api.amadeus.com/ and there are some manditory paramaters. if a date is not specified use the  {date}. If number of adults is not speicifed assume 1 adult. If no location is specified assume houston.
 
 <plainTextRequest>{request}</plainTextRequest>
 
@@ -79,3 +79,46 @@ def getLocationBasedOnGenre(genres):
     query_engine = index.as_chat_engine()
     response = str(query_engine.query(genreLocation.format(genres=genres)))
     return response.split("Location:\n")[1].split("\n")
+
+categories="""You are a categrorizer, of tasks, given a prompt categroize the prompt into 3 categories documented below:
+- Flights to location: if the prompt specifies both a location to start from and a location to go to. this is categrory 1
+- Music genres: if the prompt specifies a music genre, a customer likes and wanting to go to a undefined location, this is category 2
+- Specific song: if the prompt specifies a specific song or artist, its is category 3
+
+
+<task>{task}</task>
+
+After anylsizing the genres:
+- justify your answer in less than 100 words
+- finally output your answer in the following format: 
+Category: <categoryNum>
+"""
+def getCategory(task):
+    llm = OpenAI(temperature=0.8, model="gpt-4")
+    service_context = ServiceContext.from_defaults(llm=llm, chunk_size=512)
+    documents = SimpleDirectoryReader("musicGenres").load_data()
+    index = VectorStoreIndex.from_documents(documents, service_context=service_context)
+    query_engine = index.as_chat_engine()
+    response = str(query_engine.query(categories.format(task=task)))
+    return int(response.split("Category: ")[1].split(" ")[0])
+
+slayover = """You are a layover activity reccommender given a airport and a amount of time. Return activities to do in the airport or very close by if the time is long enough. Be very specific about the specific location do not give overly generic answers that can apply to basically any airport.
+
+<place>{place}</place>
+
+<hours>{hours}</hours>
+
+After anylsizing the genres:
+- finally output your answer in the following format: 
+Activities:
+<output>
+"""
+
+def getSlayover(place,time):
+    llm = OpenAI(temperature=0.8, model="gpt-4")
+    service_context = ServiceContext.from_defaults(llm=llm, chunk_size=512)
+    documents = SimpleDirectoryReader("Layoverstuff").load_data()
+    index = VectorStoreIndex.from_documents(documents, service_context=service_context)
+    query_engine = index.as_chat_engine()
+    response = str(query_engine.query(slayover.format(place=place, hours=time)))
+    return response.split("Activities:\n")[1]
