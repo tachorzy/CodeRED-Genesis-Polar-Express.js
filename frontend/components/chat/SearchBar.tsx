@@ -31,7 +31,7 @@ const SearchBar = () => {
 
     useEffect(() => {
       if (messagesEndRef.current) {
-        messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+        messagesEndRef.current.scrollIntoView({ behavior: "smooth", block: 'nearest', inline: 'start'  });
       }
     }, [messages]);
 
@@ -46,13 +46,13 @@ const SearchBar = () => {
         }}>
             {/*Honeypot field */}
             {/* <input name="_gotcha" type="hidden" className="hidden"/> */}
-            <div className="flex flex-col h-[39rem] pb-6 px-5 gap-y-6 overflow-y-scroll">
+            <div className="flex flex-col h-[40rem] pb-6 px-5 gap-y-6 overflow-y-scroll">
                 { 
                     messages.map((message, index) => {
                         return <TextBubble key={index} sender={message.sender} message={message.message}></TextBubble>
                     })
                 }
-                <div ref={messagesEndRef} />    
+                <div ref={messagesEndRef}></div>
             </div>
             <div className="grid grid-cols-2 gap-x-5 py-5 z-50">
                 <div className="bg-violet-900 rounded-l-2xl h-14 w-[15%] flex flex-row">
