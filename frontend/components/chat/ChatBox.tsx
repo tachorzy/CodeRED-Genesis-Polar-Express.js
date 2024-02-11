@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import ChatPrompt from './ChatPrompt'
 import TextBubble from './TextBubble'
@@ -10,58 +10,59 @@ import TextBubble from './TextBubble'
 const ChatBox = () => {
     const router = useRouter()
 
-    const [contactInfo, setContactInfo] = useState({
-        name: "",
-        email: "",
-        message: ""
-    })
+    type Message = {
+        sender: string;
+        message: string;
+      };
+    
+    const INITIAL_SEARCH_STATE = "Where will you like to fly?";
+    const [searchBarValue, setSearchBarValue] = useState("");
+    const [messages, setMessages] = useState<Message[]>([]);
 
-    // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    //     event.preventDefault(); //prevent page refresh
-    //     const formData = new FormData(event.target as HTMLFormElement);
-    //     const req = await fetch(`https://getform.io/f/${process.env.GETFORM_KEY}`, { method: 'POST', body: formData });
-    //     if(req.status == 200)
-    //         router.push("/success")
-    //     setContactInfo({ name: "", email: "", message: "" })
-    // };
+    const addMessage = (sender: string, message: string) => {
+      setMessages((prevMessages: Message[]) => [...prevMessages, { sender, message }]);
+    };
 
-    // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    //     const { name, value } = e.target;
-    //     setContactInfo((prevContactInfo) => ({
-    //       ...prevContactInfo,
-    //       [name]: value,
-    //     }));
-    // };
+    const handleSearchBarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchBarValue(event.target.value);
+    };
 
     return( 
         //chillaxRegular.className + 
         <div className={" absolute h-screen w-[46.3%] bg-[#FCFFFF]"}>
-            <form className="flex flex-col px-5">
+            <form className="flex flex-col pl-5" onSubmit={(event) => {
+                event.preventDefault();
+                if (!searchBarValue.trim()) return; // Check if searchBarValue is empty or only contains whitespace
+                setSearchBarValue(event.target.value);
+                addMessage("user", searchBarValue);
+                setSearchBarValue("");
+            }}>
                 {/*Honeypot field */}
-                <input name="_gotcha" type="hidden" className="hidden"/>
-                <div className="flex flex-col-reverse h-[34rem] pb-6 py-5 gap-y-6 overflow-y-scroll">
-                    <TextBubble sender="AI" message={"test tes test  test"}/>
-                    <TextBubble sender="user" message={"BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH"}/>
-                    <TextBubble sender="AI" message={"test tes test  test"}/>
-                    <TextBubble sender="AI" message={"test tes test  test"}/>
-                    <TextBubble sender="AI" message={"test tes test  test"}/>
-                    <TextBubble sender="AI" message={"test tes test  test"}/>
-                    <TextBubble sender="AI" message={"test tes test  test"}/>
-                    <TextBubble sender="AI" message={"test tes test  test"}/>
-                    <TextBubble sender="AI" message={"test tes test  test"}/>
-                    <TextBubble sender="AI" message={"test tes test  test"}/>
-
+                {/* <input name="_gotcha" type="hidden" className="hidden"/> */}
+                <div className="flex flex-col h-[34rem] pb-6 px-5 gap-y-6 overflow-y-scroll">
+                { 
+                    messages.map((message, index) => {
+                        return <TextBubble key={index} sender={message.sender} message={message.message}></TextBubble>
+                    })
+                }
                 </div>
                 <div className="grid grid-cols-2 gap-x-5 py-5 z-50">
                     <div className="bg-violet-900 rounded-l-2xl h-14 w-[17%] flex flex-row">
                         <Image src="/icons/flight.svg" width={47} height={47} className="justify-center z-40 bg-violet-900 rounded-l-2xl" alt=""></Image>
-                        <input name="_gotcha" type="" className="text-base text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-2xl h-14 w-[90%] z-30 absolute px-2 py-0 pl-14"/>
+                        <input
+                            placeholder={INITIAL_SEARCH_STATE}
+                            onChange={handleSearchBarChange}
+                            autoFocus={true} 
+                            name="_gotcha" 
+                            type="" 
+                            className="text-base text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-2xl h-14 w-[91%] z-30 absolute px-2 py-0 pl-14"
+                        />
                     </div>
                 </div>
-                <div className="flex flex-row -mt-3">
-                    <ChatPrompt></ChatPrompt>
-                </div>
             </form>
+            <div className="flex flex-row -mt-3 pl-5">
+                    <ChatPrompt></ChatPrompt>
+            </div>
         </div>
     );
 }
