@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image'
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 // import { chillaxRegular } from '@/utils/localNextFont'
@@ -32,19 +33,25 @@ const ChatBox = () => {
 
     return( 
         //chillaxRegular.className + 
-        <div className={" absolute h-screen w-[46.7%] bg-[#FCFFFF]"}>
+        <div className={" absolute h-screen w-[46.3%] bg-[#FCFFFF]"}>
             <form className="flex flex-col px-5">
                 {/*Honeypot field */}
                 <input name="_gotcha" type="hidden" className="hidden"/>
-                <div className="h-[37rem]">
+                <div className="h-[31.5rem]">
 
                 </div>
-                <div className="flex flex-row gap-x-5 py-5">
-                    <input name="_gotcha" type="" className="text-sky-700 flex flex-col bg-sky-100 opacity-[80%] rounded-2xl h-16 w-1/2 relative px-2 py-0"/>
-                    <input name="_gotcha" type="" className="text-sky-700 flex flex-col bg-sky-100 opacity-[80%] rounded-2xl h-16 w-1/2 relative px-2 py-0"/>
+                <div className="grid grid-cols-2 gap-x-5 py-5">
+                    <div className="bg-violet-900 rounded-l-2xl h-16 w-[17%] flex flex-row">
+                        <Image src="/icons/flight.svg" width={47} height={47} className="justify-center" alt=""></Image>
+                        <input name="_gotcha" type="" className="text-base text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-r-2xl h-16 relative px-2 py-0"/>
+                    </div>
+                    <div className="bg-violet-900 rounded-l-2xl h-16 w-[17%] flex flex-row">
+                        <Image src="/icons/flight.svg" width={47} height={47} className="justify-center" alt=""></Image>
+                    <input name="_gotcha" type="" className="text-base text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-r-2xl h-16 relative px-2 py-0"/>
+                    </div>
                 </div>
                 
-                <input name="_gotcha" type="" className="text-sky-700 flex flex-col bg-sky-100 opacity-[80%] rounded-2xl h-16 w-full relative px-2 py-0"/>
+                <input name="_gotcha" type="" className="text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-2xl h-16 w-full relative px-2 py-0"/>
             </form>
         </div>
     );
