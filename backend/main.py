@@ -26,3 +26,8 @@ def read_item(item_id: int, q: Union[str, None] = None):
 @app.post("/toApi")
 def get_something(query: str):
     return af.convertPlainToAPI(query)
+
+@app.post("/getGenres")
+def getGenres(query: str):
+    return af.getFiveGenres(query)
+
