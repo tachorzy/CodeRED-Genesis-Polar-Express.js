@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import ChatPrompt from './ChatPrompt'
+import TextBubble from './TextBubble'
 // import { chillaxRegular } from '@/utils/localNextFont'
 
 const ChatBox = () => {
@@ -38,8 +39,9 @@ const ChatBox = () => {
             <form className="flex flex-col px-5">
                 {/*Honeypot field */}
                 <input name="_gotcha" type="hidden" className="hidden"/>
-                <div className="h-[34rem] pb-5">
-
+                <div className="flex flex-col h-[34rem] py-5 gap-y-6">
+                    <TextBubble sender="AI"/>
+                    <TextBubble sender="user"/>
                 </div>
                 <div className="grid grid-cols-2 gap-x-5 py-5">
                     <div className="bg-violet-900 rounded-l-2xl h-14 w-[17%] flex flex-row">

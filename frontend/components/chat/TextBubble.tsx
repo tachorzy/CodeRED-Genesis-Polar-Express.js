@@ -4,28 +4,42 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 // import { chillaxRegular } from '@/utils/localNextFont'
 
-const TextBubble = () => {
-    const [isVisible, setIsVisible] = useState(true);
+const TextBubble = (props: {sender: string}) => {
+    // const [isVisible, setIsVisible] = useState(true);
 
 
-    //replace this to return nothing later once I make a tray component of all the prompts
-    if (!isVisible) {
-        return (
-            <div>
-                <button onClick={() => setIsVisible(true)}>
-                    <Image src="/icons/add.svg" width={28} height={28} className={"bg-violet-200 hover:bg-violet-300 rounded-lg h-6 p-2"} alt={"add"}></Image>
-                </button>
-            </div>
-        )
+    // //replace this to return nothing later once I make a tray component of all the prompts
+    // if (!isVisible) {
+    //     return (
+    //         <div>
+    //             <button onClick={() => setIsVisible(true)}>
+    //                 <Image src="/icons/add.svg" width={28} height={28} className={"bg-violet-200 hover:bg-violet-300 rounded-lg h-6 p-2"} alt={"add"}></Image>
+    //             </button>
+    //         </div>
+    //     )
+    // }
+    let alignment = "mr-auto"
+    
+    if (props.sender === "user") {
+        alignment = "ml-auto"
     }
-
     return( 
-        <div className={"flex flex-row bg-violet-500 h-6 min-w-32 rounded-lg py-0.5 pl-2"}>
-            <h1 className="text-xs text-violet-50">{"Suggestion"}</h1>
-            <button onClick={() => setIsVisible(false)}>
-                <Image src="/icons/delete.svg" width={20} height={20} className={"hover:bg-violet-300 rounded-full ml-5 h-5 right-0"} alt={"delete"}></Image>
-            </button>
+        <div className={` ${alignment} min-h-24 w-1/2 rounded-2xl bg-violet-200 p-3`}>
+            <h1 className="text-xs font-semibold text-violet-700">{"blah blah blah blah blah blah blah blah"}</h1>
+
+            {props.sender == "AI" 
+                ? 
+                <svg width="70" height="70" className={"absolute mt-4 rotate-90 rounded"}>
+                    <polygon points="50, 50, 100, 100, 0, 100" fill="#ddd6fe" className="ml-16"/>
+                </svg>
+                :  
+                <svg width="70" height="70" className={"absolute mt-0.5 ml-[14.25rem] rotate-45 rounded"}>
+                    <polygon points="50, 50, 100, 100, 0, 100" fill="#ddd6fe" className="ml-16"/>
+                </svg>
+                }
+
         </div>
+
     );
 }
 
