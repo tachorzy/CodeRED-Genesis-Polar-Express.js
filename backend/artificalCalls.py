@@ -1,5 +1,5 @@
 import os 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "<api-key>"
 
 from llama_index import VectorStoreIndex, SimpleDirectoryReader
 from llama_index import ( SimpleDirectoryReader, ServiceContext, KnowledgeGraphIndex,)
