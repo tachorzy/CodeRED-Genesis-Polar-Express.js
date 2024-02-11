@@ -6,8 +6,9 @@ import { useRouter } from 'next/navigation'
 import ChatPrompt from './ChatPrompt'
 import TextBubble from './TextBubble'
 // import { chillaxRegular } from '@/utils/localNextFont'
-
+import useAI from '@/hooks/useAI'
 const SearchBar = () => {
+    const {getAmadeus,getGenres,getLocationBasedOnGenre, getCat, runPrompt} = useAI();
     const router = useRouter()
 
     type Message = {
@@ -18,7 +19,7 @@ const SearchBar = () => {
     const INITIAL_SEARCH_STATE = "Where will you like to fly?";
     const [searchBarValue, setSearchBarValue] = useState("");
     const [messages, setMessages] = useState<Message[]>([]);
-
+    
     const addMessage = (sender: string, message: string) => {
       setMessages((prevMessages: Message[]) => [...prevMessages, { sender, message }]);
     };
@@ -37,11 +38,12 @@ const SearchBar = () => {
 
 
     return( 
-        <form className="flex flex-col pl-5" onSubmit={(event) => {
+        <form className="flex flex-col pl-5" onSubmit={async (event)=> {
             event.preventDefault();
             if (!searchBarValue.trim()) return; // Check if searchBarValue is empty or only contains whitespace
             setSearchBarValue(event.target.value);
             addMessage("user", searchBarValue);
+            addMessage("AI", await runPrompt(searchBarValue));
             setSearchBarValue("");
         }}>
             {/*Honeypot field */}

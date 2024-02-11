@@ -20,7 +20,7 @@ const useAI = () => {
                 'accept': 'application/json',
             },
             body:"",
-        }).then(thing => {return thing});
+        }).then(thing => {return thing.json()});
         return api_request
     }
 
@@ -32,8 +32,8 @@ const useAI = () => {
                 'accept': 'application/json',
             },
             body:"",
-        }).then(thing => {return thing});
-        return api_request
+        }).then(thing => {return thing.json()});
+        return (api_request)
     }
 
     async function getCat(prompt) {
@@ -49,14 +49,7 @@ const useAI = () => {
     }
 
     async function runPrompt(prompt) {
-        const category = getCat(prompt)
-        if(category == 1){
-            return getAmadeus(prompt)
-        }else if (category == 2) {
-            return getLocationBasedOnGenre(prompt)
-        }else {
-            return getLocationBasedOnGenre(prompt)
-        }
+        return await getAmadeus(prompt)
     }
     return {getAmadeus,getGenres,getLocationBasedOnGenre, getCat, runPrompt}
 }

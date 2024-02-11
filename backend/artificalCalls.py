@@ -1,5 +1,5 @@
 import os 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 import logging
 
 logger = logging.getLogger(__name__)
@@ -88,10 +88,10 @@ After anylsizing the genres:
 - justify your answer in less than 200 words
 - finally output your answer in the following format: 
 Location:
-<Country>,<City>
-<Country>,<City>
-<Country>,<City>
-<Country>,<City>
+<Country>,<City>|
+<Country>,<City>|
+<Country>,<City>|
+<Country>,<City>|
 <Country>,<City>
 """
 def getLocationBasedOnGenre(genres):
