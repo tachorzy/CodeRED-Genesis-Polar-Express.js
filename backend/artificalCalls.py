@@ -1,5 +1,5 @@
 import os 
-os.environ["OPENAI_API_KEY"] = "<apikey>"
+os.environ["OPENAI_API_KEY"] = "apikey"
 
 from llama_index import VectorStoreIndex, SimpleDirectoryReader
 from llama_index import ( SimpleDirectoryReader, ServiceContext, KnowledgeGraphIndex,)
@@ -9,6 +9,22 @@ from IPython.display import Markdown, display
 from llama_index.storage.storage_context import StorageContext
 import datetime
 
+llm = OpenAI(temperature=0, model="gpt-4")
+llm_low_temp = OpenAI(temperature=0.8, model="gpt-4")
+service_context = ServiceContext.from_defaults(llm=llm, chunk_size=512)
+service_context_low_temp = ServiceContext.from_defaults(llm=llm_low_temp, chunk_size=512)
+
+flightsAPISpecs = SimpleDirectoryReader("flightsAPISpecs").load_data()
+flightAPI = VectorStoreIndex.from_documents(flightsAPISpecs, service_context=service_context)
+flightAPIllm= flightAPI.as_query_engine()
+
+musicalGenres = SimpleDirectoryReader("musicGenres").load_data()
+musicalIndex = VectorStoreIndex.from_documents(musicalGenres, service_context=service_context_low_temp)
+musical_llm  = musicalIndex.as_chat_engine()
+
+Layoverstuff = SimpleDirectoryReader("musicGenres").load_data()
+layIndex = VectorStoreIndex.from_documents(Layoverstuff, service_context=service_context_low_temp)
+layoverllm= layIndex.as_chat_engine()
 plainTextToAPIPrompt = """You are Amadeus api prompt creator. Using your knowledge of the Amadeus api convert a plain text request into a Get request to the api.
 Keep in mind that the api url is https://test.api.amadeus.com/ and there are some manditory paramaters. if a date is not specified use the  {date}. If number of adults is not speicifed assume 1 adult. If no location is specified assume houston.
 
@@ -22,12 +38,7 @@ Answer: |<request>|"""
 
 
 def convertPlainToAPI(plaintext):
-    llm = OpenAI(temperature=0, model="gpt-4")
-    service_context = ServiceContext.from_defaults(llm=llm, chunk_size=512)
-    documents = SimpleDirectoryReader("flightsAPISpecs").load_data()
-    index = VectorStoreIndex.from_documents(documents, service_context=service_context)
-    query_engine = index.as_query_engine()
-    response = str(query_engine.query(plainTextToAPIPrompt.format(request="I want the cheapest flight from NYC to LON in departing in the next week", date=datetime.datetime.now())))
+    response = str(flightAPIllm.query(plainTextToAPIPrompt.format(request=plaintext, date=datetime.datetime.now())))
     print(response)
     url = response[response.find("|")+1: response.rfind("|")]
     return url
@@ -49,12 +60,7 @@ Genre4,
 Genre5"""
 
 def getFiveGenres(query):
-    llm = OpenAI(temperature=0.8, model="gpt-4")
-    service_context = ServiceContext.from_defaults(llm=llm, chunk_size=512)
-    documents = SimpleDirectoryReader("musicGenres").load_data()
-    index = VectorStoreIndex.from_documents(documents, service_context=service_context)
-    query_engine = index.as_chat_engine()
-    response = str(query_engine.query(musicalGenres.format(inital=query, time=datetime.datetime.now())))
+    response = str(musical_llm.query(musicalGenres.format(inital=query, time=datetime.datetime.now())))
     return response.split("Answers:\n")[1].split(",\n")
 
 genreLocation="""You are a travel recommender. You will be given a list of musical genres. Based on these genres, 5 cities recommend countries to visit. Varry your list for example if two are in the US have one abroud. Have at least one very wild location.
@@ -72,12 +78,7 @@ Location:
 <Country>,<City>
 """
 def getLocationBasedOnGenre(genres):
-    llm = OpenAI(temperature=0.8, model="gpt-4")
-    service_context = ServiceContext.from_defaults(llm=llm, chunk_size=512)
-    documents = SimpleDirectoryReader("musicGenres").load_data()
-    index = VectorStoreIndex.from_documents(documents, service_context=service_context)
-    query_engine = index.as_chat_engine()
-    response = str(query_engine.query(genreLocation.format(genres=genres)))
+    response = str(musical_llm.query(genreLocation.format(genres=genres)))
     return response.split("Location:\n")[1].split("\n")
 
 categories="""You are a categrorizer, of tasks, given a prompt categroize the prompt into 3 categories documented below:
@@ -94,12 +95,7 @@ After anylsizing the genres:
 Category: <categoryNum>
 """
 def getCategory(task):
-    llm = OpenAI(temperature=0.8, model="gpt-4")
-    service_context = ServiceContext.from_defaults(llm=llm, chunk_size=512)
-    documents = SimpleDirectoryReader("musicGenres").load_data()
-    index = VectorStoreIndex.from_documents(documents, service_context=service_context)
-    query_engine = index.as_chat_engine()
-    response = str(query_engine.query(categories.format(task=task)))
+    response = str(musical_llm.query(categories.format(task=task)))
     return int(response.split("Category: ")[1].split(" ")[0])
 
 slayover = """You are a layover activity reccommender given a airport and a amount of time. Return activities to do in the airport or very close by if the time is long enough. Be very specific about the specific location do not give overly generic answers that can apply to basically any airport.
@@ -115,10 +111,5 @@ Activities:
 """
 
 def getSlayover(place,time):
-    llm = OpenAI(temperature=0.8, model="gpt-4")
-    service_context = ServiceContext.from_defaults(llm=llm, chunk_size=512)
-    documents = SimpleDirectoryReader("Layoverstuff").load_data()
-    index = VectorStoreIndex.from_documents(documents, service_context=service_context)
-    query_engine = index.as_chat_engine()
-    response = str(query_engine.query(slayover.format(place=place, hours=time)))
+    response = str(layoverllm.query(slayover.format(place=place, hours=time)))
     return response.split("Activities:\n")[1]
