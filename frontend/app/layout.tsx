@@ -20,7 +20,7 @@ const RootLayout = async ({ children }: LayoutProps) => {
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <div className="bottom-0 col-span-2">
+        <div className="bottom-0">
           <Footer/>
         </div>
       </body>
