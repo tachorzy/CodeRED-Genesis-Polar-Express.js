@@ -51,6 +51,18 @@ const useAI = () => {
     async function runPrompt(prompt) {
         return await getAmadeus(prompt)
     }
+
+    async function getReplyMessage(flightInfo) { 
+        if (flightInfo === null) {
+            return "I'm sorry, I couldn't find any flights that match your criteria. Please try again."
+        }
+        else {
+            return `You can fly from ${flightInfo.segments[0]} to ${flightInfo.destination} for $${flightInfo.price}. The flight is ${flightInfo.duration} hours long.`
+
+        }
+    }
+
+
     return {getAmadeus,getGenres,getLocationBasedOnGenre, getCat, runPrompt}
 }
 export default useAI;

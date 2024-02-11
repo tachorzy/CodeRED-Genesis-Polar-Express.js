@@ -7,6 +7,8 @@ import ChatPrompt from './ChatPrompt'
 import TextBubble from './TextBubble'
 // import { chillaxRegular } from '@/utils/localNextFont'
 import useAI from '@/hooks/useAI'
+import ChatBoxSkeleton from './ChatSkeleton'
+
 const SearchBar = () => {
     const {getAmadeus,getGenres,getLocationBasedOnGenre, getCat, runPrompt} = useAI();
     const router = useRouter()
@@ -19,7 +21,8 @@ const SearchBar = () => {
     const INITIAL_SEARCH_STATE = "Where will you like to fly?";
     const [searchBarValue, setSearchBarValue] = useState("");
     const [messages, setMessages] = useState<Message[]>([]);
-    
+    const [replyStatus, setReplyStatus] = useState(false);
+
     const addMessage = (sender: string, message: string) => {
       setMessages((prevMessages: Message[]) => [...prevMessages, { sender, message }]);
     };
@@ -43,12 +46,14 @@ const SearchBar = () => {
             if (!searchBarValue.trim()) return; // Check if searchBarValue is empty or only contains whitespace
             setSearchBarValue(event.target.value);
             addMessage("user", searchBarValue);
+            setReplyStatus(true)
             addMessage("AI", await runPrompt(searchBarValue));
             setSearchBarValue("");
+            setReplyStatus(false)
         }}>
             {/*Honeypot field */}
             {/* <input name="_gotcha" type="hidden" className="hidden"/> */}
-            <div className="flex flex-col h-[40rem] pb-6 px-5 gap-y-6 overflow-y-scroll">
+            <div className="flex flex-col h-[38rem] pb-6 px-5 gap-y-6 overflow-y-scroll">
                 { 
                     messages.map((message, index) => {
                         return <TextBubble key={index} sender={message.sender} message={message.message}></TextBubble>
@@ -56,6 +61,7 @@ const SearchBar = () => {
                 }
                 <div ref={messagesEndRef}></div>
             </div>
+            <ChatBoxSkeleton replyStatus={replyStatus}/>
             <div className="grid grid-cols-2 gap-x-5 py-5 z-50">
                 <div className="bg-violet-900 rounded-l-2xl h-14 w-[15%] flex flex-row">
                     <Image src="/icons/flight.svg" width={47} height={47} className="justify-center z-40 bg-violet-900 rounded-l-2xl" alt=""></Image>
