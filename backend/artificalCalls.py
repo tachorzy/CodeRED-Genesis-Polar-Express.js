@@ -1,5 +1,5 @@
 import os 
-os.environ["OPENAI_API_KEY"] = "<api-key>"
+os.environ["OPENAI_API_KEY"] = "<apikey>"
 
 from llama_index import VectorStoreIndex, SimpleDirectoryReader
 from llama_index import ( SimpleDirectoryReader, ServiceContext, KnowledgeGraphIndex,)
@@ -56,3 +56,26 @@ def getFiveGenres(query):
     query_engine = index.as_chat_engine()
     response = str(query_engine.query(musicalGenres.format(inital=query, time=datetime.datetime.now())))
     return response.split("Answers:\n")[1].split(",\n")
+
+genreLocation="""You are a travel recommender. You will be given a list of musical genres. Based on these genres, 5 cities recommend countries to visit. Varry your list for example if two are in the US have one abroud. Have at least one very wild location.
+
+<genres>{genres}</genres>
+
+After anylsizing the genres:
+- justify your answer in less than 200 words
+- finally output your answer in the following format: 
+Location:
+<Country>,<City>
+<Country>,<City>
+<Country>,<City>
+<Country>,<City>
+<Country>,<City>
+"""
+def getLocationBasedOnGenre(genres):
+    llm = OpenAI(temperature=0.8, model="gpt-4")
+    service_context = ServiceContext.from_defaults(llm=llm, chunk_size=512)
+    documents = SimpleDirectoryReader("musicGenres").load_data()
+    index = VectorStoreIndex.from_documents(documents, service_context=service_context)
+    query_engine = index.as_chat_engine()
+    response = str(query_engine.query(genreLocation.format(genres=genres)))
+    return response.split("Location:\n")[1].split("\n")

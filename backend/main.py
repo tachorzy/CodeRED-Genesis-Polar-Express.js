@@ -31,3 +31,6 @@ def get_something(query: str):
 def getGenres(query: str):
     return af.getFiveGenres(query)
 
+@app.post("/recLocation")
+def recLocation(genres: str):
+    return af.getLocationBasedOnGenre(genres)
