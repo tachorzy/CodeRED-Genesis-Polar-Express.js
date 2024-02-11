@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image'
-import React, { ReactNode, useState } from 'react'
+import React, { ReactNode, useState, useEffect, useRef} from 'react'
 import { useRouter } from 'next/navigation'
 import ChatPrompt from './ChatPrompt'
 import TextBubble from './TextBubble'
@@ -27,6 +27,15 @@ const ChatBox = () => {
         setSearchBarValue(event.target.value);
     };
 
+    const messagesEndRef = useRef(null);
+
+    useEffect(() => {
+      if (messagesEndRef.current) {
+        messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, [messages]);
+
+
     return( 
         //chillaxRegular.className + 
         <div className={" absolute h-screen w-[46.3%] bg-[#FCFFFF]"}>
@@ -40,11 +49,12 @@ const ChatBox = () => {
                 {/*Honeypot field */}
                 {/* <input name="_gotcha" type="hidden" className="hidden"/> */}
                 <div className="flex flex-col h-[34rem] pb-6 px-5 gap-y-6 overflow-y-scroll">
-                { 
-                    messages.map((message, index) => {
-                        return <TextBubble key={index} sender={message.sender} message={message.message}></TextBubble>
-                    })
-                }
+                    { 
+                        messages.map((message, index) => {
+                            return <TextBubble key={index} sender={message.sender} message={message.message}></TextBubble>
+                        })
+                    }
+                    <div ref={messagesEndRef} />    
                 </div>
                 <div className="grid grid-cols-2 gap-x-5 py-5 z-50">
                     <div className="bg-violet-900 rounded-l-2xl h-14 w-[17%] flex flex-row">
