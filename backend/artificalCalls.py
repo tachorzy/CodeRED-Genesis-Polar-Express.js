@@ -1,5 +1,5 @@
 import os 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 import logging
 
 logger = logging.getLogger(__name__)
@@ -30,7 +30,7 @@ Layoverstuff = SimpleDirectoryReader("musicGenres").load_data()
 layIndex = VectorStoreIndex.from_documents(Layoverstuff, service_context=service_context_low_temp)
 layoverllm= layIndex.as_chat_engine()
 plainTextToAPIPrompt = """You are Amadeus api prompt creator. Using your knowledge of the Amadeus api convert a plain text request into a Get request to the api.
-Keep in mind that the api url is https://test.api.amadeus.com/ and there are some manditory paramaters. if a date is not specified use the  {date}. You must specifiy the 3 digit airport codes in captial letters not the place name, in the query.  If number of adults is not speicifed assume 1 adult. If no location is specified assume houston. Cap output at 5
+Keep in mind that the api url is https://test.api.amadeus.com/ and there are some manditory paramaters. if a date is not specified use the  {date}. You must specifiy the 3 digit airport codes in captial letters not the place name, in the query.  If number of adults is not speicifed assume 1 adult. If no location is specified assume houston. If no return date is specified assume the return date is tommorow. Cap output at 5
 
 <plainTextRequest>{request}</plainTextRequest>
 
