@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import ChatPrompt from './ChatPrompt'
 // import { chillaxRegular } from '@/utils/localNextFont'
 
 const ChatBox = () => {
@@ -47,7 +48,7 @@ const ChatBox = () => {
                     </div>
                 </div>
                 <div className="flex flex-row">
-                    
+                <ChatPrompt></ChatPrompt>
                 </div>
             </form>
         </div>
