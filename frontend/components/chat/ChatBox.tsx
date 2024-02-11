@@ -50,6 +50,7 @@ const ChatBox = () => {
                     <div className="bg-violet-900 rounded-l-2xl h-14 w-[17%] flex flex-row">
                         <Image src="/icons/flight.svg" width={47} height={47} className="justify-center z-40 bg-violet-900 rounded-l-2xl" alt=""></Image>
                         <input
+                            value={searchBarValue}
                             placeholder={INITIAL_SEARCH_STATE}
                             onChange={handleSearchBarChange}
                             autoFocus={true} 
