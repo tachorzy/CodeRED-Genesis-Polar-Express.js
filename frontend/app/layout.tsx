@@ -20,7 +20,7 @@ const RootLayout = async ({ children }: LayoutProps) => {
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <div className="bottom-0">
+        <div className="bottom-0 overflow-x-hidden">
           <Footer/>
         </div>
       </body>

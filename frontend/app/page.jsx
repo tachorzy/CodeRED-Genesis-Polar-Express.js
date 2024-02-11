@@ -2,10 +2,13 @@ import NavBar from "@/components/Navbar";
 import ChatBox from "@/components/chat/ChatBox";
 import React from "react";
 import Infographics from "@/components/Infographics";
+// import { useSpotify } from "@/hooks/useSpotify";
+
+
 export default function Home() {
-  const {getToken} = useSpotify();
-  const token = getToken();
-  console.log(token)
+  // const {getToken} = useSpotify();
+  // const token = getToken();
+  // console.log(token)
   return (
     <main>
       <div className="bg-violet-500 grid grid-cols-2 h-screen pl-24">  
