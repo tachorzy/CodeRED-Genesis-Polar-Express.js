@@ -3,6 +3,7 @@ import ChatBox from "@/components/chat/ChatBox";
 import React from "react";
 import useSpotify from "/hooks/useSpotify";
 import Infographics from "@/components/Infographics";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const {getToken} = useSpotify();
@@ -19,6 +20,7 @@ export default function Home() {
           <ChatBox/>
         </div>
       </div>
+
     </main>
   );
 }
