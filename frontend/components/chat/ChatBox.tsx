@@ -47,8 +47,8 @@ const ChatBox = () => {
                         <input name="_gotcha" type="" className="text-base text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-2xl h-14 w-[90%] z-30 absolute px-2 py-0 pl-14"/>
                     </div>
                 </div>
-                <div className="flex flex-row">
-                <ChatPrompt></ChatPrompt>
+                <div className="flex flex-row -mt-3">
+                    <ChatPrompt></ChatPrompt>
                 </div>
             </form>
         </div>

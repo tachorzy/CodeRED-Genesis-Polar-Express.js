@@ -20,10 +20,10 @@ const ChatPrompt = () => {
     }
 
     return( 
-        <div className={"flex flex-row bg-violet-500 h-6 min-w-32 rounded-lg py-0.5 pl-2"}>
-            <h1 className="text-sm text-violet-50">{"Suggestion"}</h1>
+        <div className={"flex flex-row bg-violet-500 h-6 min-w-32 rounded-lg pl-2"}>
+            <h1 className="text-xs text-violet-50 py-0.5 pt-1">{"Suggestion"}</h1>
             <button onClick={() => setIsVisible(false)}>
-                <Image src="/icons/delete.svg" width={20} height={20} className={"hover:bg-violet-300 rounded-full ml-5 h-5 right-0"} alt={"delete"}></Image>
+                <Image src="/icons/delete.svg" width={20} height={20} className={"hover:bg-violet-300 rounded-r-lg ml-9 h-6 right-0"} alt={"delete"}></Image>
             </button>
         </div>
     );
