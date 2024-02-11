@@ -1,5 +1,5 @@
 import NavBar from "@/components/Navbar";
-import ChatBox from "@/components/ChatBox";
+import ChatBox from "@/components/chat/ChatBox";
 import React from "react";
 
 export default function Home() {

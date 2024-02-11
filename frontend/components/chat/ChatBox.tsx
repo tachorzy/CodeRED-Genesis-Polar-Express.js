@@ -37,21 +37,18 @@ const ChatBox = () => {
             <form className="flex flex-col px-5">
                 {/*Honeypot field */}
                 <input name="_gotcha" type="hidden" className="hidden"/>
-                <div className="h-[31.5rem]">
+                <div className="h-[34rem] pb-5">
 
                 </div>
                 <div className="grid grid-cols-2 gap-x-5 py-5">
-                    <div className="bg-violet-900 rounded-l-2xl h-16 w-[17%] flex flex-row">
-                        <Image src="/icons/flight.svg" width={47} height={47} className="justify-center" alt=""></Image>
-                        <input name="_gotcha" type="" className="text-base text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-r-2xl h-16 relative px-2 py-0"/>
-                    </div>
-                    <div className="bg-violet-900 rounded-l-2xl h-16 w-[17%] flex flex-row">
-                        <Image src="/icons/flight.svg" width={47} height={47} className="justify-center" alt=""></Image>
-                    <input name="_gotcha" type="" className="text-base text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-r-2xl h-16 relative px-2 py-0"/>
+                    <div className="bg-violet-900 rounded-l-2xl h-14 w-[17%] flex flex-row">
+                        <Image src="/icons/flight.svg" width={47} height={47} className="justify-center z-40 bg-violet-900 rounded-l-2xl" alt=""></Image>
+                        <input name="_gotcha" type="" className="text-base text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-2xl h-14 w-[90%] z-30 absolute px-2 py-0 pl-14"/>
                     </div>
                 </div>
-                
-                <input name="_gotcha" type="" className="text-violet-700 flex flex-col bg-violet-100 opacity-[85%] rounded-2xl h-16 w-full relative px-2 py-0"/>
+                <div className="flex flex-row">
+                    
+                </div>
             </form>
         </div>
     );
